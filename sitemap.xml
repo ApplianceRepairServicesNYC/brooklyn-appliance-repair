@@ -2083,4 +2083,9 @@
   <url><loc>https://brooklyn-appliance-repair-ny.com/appliances/vent-hood-repair/</loc></url>
   <url><loc>https://brooklyn-appliance-repair-ny.com/appliances/wine-cooler-repair/</loc></url>
   <url><loc>https://brooklyn-appliance-repair-ny.com/appliances/freezer-repair/</loc></url>
+  <url>
+    <loc>https://brooklyn-appliance-repair-ny.com/epa-certified/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
