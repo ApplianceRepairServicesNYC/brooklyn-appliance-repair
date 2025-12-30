@@ -1,5 +1,42 @@
-User-agent: *
+# robots.txt for brooklyn-appliance-repair-ny.com
+
+User-Agent: *
 Allow: /
 
-Sitemap: https://brooklyn-appliance-repair-ny.com/sitemap.xml
+User-agent: Amazonbot
+Disallow: /
 
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+Sitemap: https://brooklyn-appliance-repair-ny.com/sitemap.xml

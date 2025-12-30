@@ -17,7 +17,7 @@
  <style>
  :root {
    --blue: #003087;
-   --red: #c41230;
+   --red: #e41e26;
    --gray: #f8f9fa;
    --green: #059669;
    --light-green: #d1fae5;
@@ -28,9 +28,13 @@
    color: #333;
    background: #fff;
    line-height: 1.6;
+   box-sizing: border-box;
+   overscroll-behavior: none;
  }
  h1, h2, h3 { font-weight: 700; color: var(--blue); }
- .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+ .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
+ 
+ /* Header - Homepage replica */
  header {
    background: var(--blue);
    color: white;
@@ -40,37 +44,157 @@
    top: 0;
    z-index: 1000;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   box-sizing: border-box;
  }
  .logo-link { display: inline-flex; align-items: center; text-decoration: none; }
- .logo-text { color: white; font-size: 24px; font-weight: 700; }
+ .logo-link:hover { opacity: 0.9; }
+ .logo-svg { height: 50px; width: auto; }
+ @media (max-width: 768px) { .logo-svg { height: 40px; } }
+ @media (max-width: 480px) { .logo-svg { height: 32px; } }
  .nav-wrapper { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
- .nav-right { display: flex; gap: 20px; align-items: center; }
- .nav-link {
+ .nav-right { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+ .services-menu { position: relative; }
+ .services-btn {
    color: white;
-   text-decoration: none;
    font-weight: 600;
+   cursor: pointer;
    padding: 12px 20px;
    border-radius: 6px;
    transition: all .3s;
+   background: rgba(255, 255, 255, 0.1);
+   white-space: nowrap;
+   box-sizing: border-box;
  }
- .nav-link:hover { background: rgba(255, 255, 255, 0.1); }
+ .services-btn:hover { background: rgba(255, 255, 255, 0.2); }
  .nav-call-btn {
    background: var(--red);
    color: white;
    padding: 12px 28px;
    border-radius: 6px;
    font-weight: 700;
-   border: none;
-   cursor: pointer;
+   text-decoration: none;
+   font-size: 17px;
    transition: all .3s;
+   cursor: pointer;
+   box-sizing: border-box;
+   border: none;
  }
- .nav-call-btn:hover { transform: scale(1.05); }
+ .nav-call-btn:hover { background: #c41b20; transform: translateY(-2px); }
+ .services-dropdown {
+   display: none;
+   position: fixed;
+   top: 80px;
+   width: 420px;
+   min-width: 360px;
+   max-width: 95%;
+   min-height: 100px;
+   background: var(--blue);
+   border-radius: 12px;
+   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+   padding: 32px 0;
+   z-index: 1000;
+   max-height: 80vh;
+   overflow-y: auto;
+   box-sizing: border-box;
+   overflow-wrap: break-word;
+   white-space: nowrap;
+   overscroll-behavior: contain;
+ }
+ .services-menu.active .services-dropdown { display: block; }
+ @media (hover: hover) and (pointer: fine) {
+   .services-menu:hover .services-dropdown { display: block; }
+ }
+ #servicesMenu .services-dropdown { right: 20px; }
+ .dropdown-close-btn {
+   position: absolute;
+   top: 12px;
+   right: 12px;
+   background: rgba(255, 255, 255, 0.15);
+   border: none;
+   color: white;
+   width: 36px;
+   height: 36px;
+   border-radius: 50%;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 20px;
+   transition: all .3s;
+   z-index: 10;
+ }
+ .dropdown-close-btn:hover { background: var(--red); transform: rotate(90deg); }
  @media (max-width: 768px) {
+   .services-dropdown {
+     width: 95%;
+     max-width: 420px;
+     min-width: 320px;
+     right: auto;
+     left: 50%;
+     transform: translateX(-50%);
+     top: 80px;
+   }
    .nav-wrapper { flex-direction: column; padding: 15px 0; }
    .logo-link { margin-bottom: 10px; }
-   .nav-right { width: 100%; justify-content: center; gap: 15px; flex-wrap: wrap; }
+   .nav-right { width: 100%; justify-content: center; gap: 15px; }
  }
+ @media (max-width: 480px) {
+   .services-dropdown { width: 95%; max-width: 380px; min-width: 300px; }
+ }
+ .services-dropdown li {
+   padding: 22px 36px;
+   margin: 14px 0;
+   color: #eee;
+   font-size: 18px;
+   line-height: 2.3;
+   transition: all .3s;
+   cursor: pointer;
+   box-sizing: border-box;
+   list-style: none;
+ }
+ .services-dropdown li:hover { background: var(--red); color: white; padding-left: 46px; }
+ .services-dropdown a { color: #eee; text-decoration: none; display: block; width: 100%; height: 100%; }
+ .services-dropdown li:hover a { color: white; }
+ .submenu-toggle {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-weight: 700;
+   background: rgba(255, 255, 255, 0.15);
+   margin: 14px 20px;
+   border-radius: 8px;
+   padding: 22px 24px;
+   cursor: pointer;
+   box-sizing: border-box;
+ }
+ .submenu-toggle:after { content: "›"; transition: transform .3s; font-size: 18px; }
+ .submenu-toggle:hover:after { transform: rotate(90deg); }
+ .additional-submenu, .service-areas-submenu {
+   max-height: 0;
+   overflow-y: auto;
+   transition: max-height 0.8s ease;
+   background: rgba(0, 0, 0, 0.2);
+   margin: 0 20px 14px;
+   border-radius: 8px;
+   box-sizing: border-box;
+   white-space: normal;
+   -webkit-overflow-scrolling: touch;
+ }
+ .additional-submenu li, .service-areas-submenu li {
+   padding: 20px 44px;
+   color: #eee;
+   font-size: 17px;
+   line-height: 2.1;
+   margin: 12px 0;
+   transition: all .3s;
+   box-sizing: border-box;
+   cursor: pointer;
+ }
+ .additional-submenu li:hover, .service-areas-submenu li:hover { background: var(--red); color: white; padding-left: 54px; }
+ .service-areas-submenu li a { color: #eee; text-decoration: none; display: block; width: 100%; height: 100%; transition: all .3s; }
+ .service-areas-submenu li:hover a { color: white; }
  
+ /* Hero */
  .hero {
    background: linear-gradient(135deg, var(--blue) 0%, #001a4d 100%);
    color: white;
@@ -101,9 +225,7 @@
    gap: 60px;
    align-items: center;
  }
- @media (max-width: 768px) {
-   .intro-grid { grid-template-columns: 1fr; gap: 40px; }
- }
+ @media (max-width: 768px) { .intro-grid { grid-template-columns: 1fr; gap: 40px; } }
  .intro-content h2 { font-size: 36px; margin-bottom: 20px; }
  .intro-content p { font-size: 18px; line-height: 1.8; color: #555; margin-bottom: 15px; }
  
@@ -144,14 +266,14 @@
  .benefit-icon {
    width: 70px;
    height: 70px;
-   background: var(--light-green);
+   background: rgba(0, 48, 135, 0.1);
    border-radius: 50%;
    display: flex;
    align-items: center;
    justify-content: center;
    margin: 0 auto 20px;
  }
- .benefit-icon svg { width: 35px; height: 35px; fill: var(--green); }
+ .benefit-icon svg { width: 35px; height: 35px; fill: var(--blue); }
  .benefit-card h3 { font-size: 22px; margin-bottom: 15px; }
  .benefit-card p { color: #666; line-height: 1.7; }
  
@@ -171,15 +293,16 @@
  .cert-type.highlight {
    background: var(--blue);
    color: white;
-   border-left-color: var(--green);
+   border-left-color: var(--red);
  }
  .cert-type.highlight h4 { color: white; }
  .cert-type.highlight p { opacity: 0.9; }
  .cert-type h4 { color: var(--blue); font-size: 20px; margin-bottom: 10px; }
  .cert-type p { color: #666; font-size: 15px; line-height: 1.6; }
  
+ /* CTA Section - Blue theme with red button */
  .cta-section {
-   background: linear-gradient(135deg, var(--green) 0%, #047857 100%);
+   background: linear-gradient(135deg, var(--blue) 0%, #001a4d 100%);
    color: white;
    padding: 80px 0;
    text-align: center;
@@ -187,8 +310,8 @@
  .cta-section h2 { color: white; font-size: 40px; margin-bottom: 20px; }
  .cta-section p { font-size: 20px; opacity: 0.95; max-width: 600px; margin: 0 auto 30px; }
  .cta-btn {
-   background: white;
-   color: var(--green);
+   background: var(--red);
+   color: white;
    padding: 18px 45px;
    border-radius: 8px;
    font-size: 20px;
@@ -197,11 +320,9 @@
    cursor: pointer;
    transition: transform 0.3s, box-shadow 0.3s;
  }
- .cta-btn:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+ .cta-btn:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(0,0,0,0.3); background: #c41b20; }
  
- .appliances-we-service {
-   margin-top: 50px;
- }
+ .appliances-we-service { margin-top: 50px; }
  .appliances-grid {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -254,18 +375,39 @@
 </head>
 <body>
 <header>
- <div class="container">
-   <div class="nav-wrapper">
-     <a href="https://brooklyn-appliance-repair-ny.com/" class="logo-link">
-       <span class="logo-text">Brooklyn Appliance Repair</span>
-     </a>
-     <div class="nav-right">
-       <a href="https://brooklyn-appliance-repair-ny.com/" class="nav-link">Home</a>
-       <a href="https://brooklyn-appliance-repair-ny.com/brands/" class="nav-link">Brands</a>
-       <a href="https://brooklyn-appliance-repair-ny.com/brooklyn/" class="nav-link">Service Areas</a>
-       <a href="https://brooklyn-appliance-repair-ny.com/contact/" class="nav-link">Contact</a>
-       <button class="nav-call-btn" id="navCallNow">📞 Call Now</button>
+ <div class="container nav-wrapper">
+   <a href="https://brooklyn-appliance-repair-ny.com/" class="logo-link" aria-label="Return to Brooklyn Appliance Repair Homepage"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 55" class="logo-svg"><defs><linearGradient id="fridgeGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#e8ecf1"/><stop offset="100%" style="stop-color:#c5cdd8"/></linearGradient><linearGradient id="badgeGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#3b6cb5"/><stop offset="100%" style="stop-color:#1e3a6e"/></linearGradient></defs><circle cx="27" cy="27.5" r="25" fill="url(#badgeGrad)" stroke="#5a8ad4" stroke-width="2"/><rect x="14" y="8" width="22" height="38" rx="2" fill="url(#fridgeGrad)" stroke="#8896a7" stroke-width="1"/><rect x="15" y="9" width="20" height="12" rx="1" fill="#f5f7fa" stroke="#a0aec0" stroke-width="0.5"/><rect x="32" y="12" width="2" height="6" rx="0.5" fill="#6b7c8f"/><rect x="15" y="23" width="20" height="22" rx="1" fill="#f5f7fa" stroke="#a0aec0" stroke-width="0.5"/><rect x="32" y="28" width="2" height="12" rx="0.5" fill="#6b7c8f"/><g transform="translate(6, 20) rotate(-30)"><rect x="0" y="8" width="4" height="18" rx="1" fill="#f97316"/><path d="M-2 4 L2 0 L6 4 L6 10 L4 10 L4 7 L2 5 L0 7 L0 10 L-2 10 Z" fill="#71717a"/></g><text x="58" y="24" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#ffffff" letter-spacing="0.5">BROOKLYN</text><text x="58" y="43" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#f97316" letter-spacing="1.5">APPLIANCE REPAIR</text></svg></a>
+   <div class="nav-right">
+     <div class="services-menu" id="servicesMenu">
+       <div class="services-btn" id="servicesToggle">Services</div>
+       <ul class="services-dropdown" id="servicesDropdown">
+         <button class="dropdown-close-btn" id="dropdownCloseBtn" aria-label="Close Services Menu">×</button>
+         <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/washer-repair/">Washer Repair</a></li>
+         <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/dryer-repair/">Dryer Repair</a></li>
+         <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/refrigerator-repair/">Refrigerator Repair</a></li>
+         <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/dishwasher-repair/">Dishwasher Repair</a></li>
+         <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/oven-repair/">Oven & Range Repair</a></li>
+         <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/cooktop-repair/">Cooktop Repair</a></li>
+         <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/microwave-repair/">Microwave Repair</a></li>
+         <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/wine-cooler-repair/">Wine Cooler Repair</a></li>
+         <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/freezer-repair/">Freezer Repair</a></li>
+         <li><a href="https://brooklyn-appliance-repair-ny.com/">All Appliances</a></li>
+         <li><a href="https://brooklyn-appliance-repair-ny.com/reviews/">★ Reviews</a></li>
+         <li><a href="https://brooklyn-appliance-repair-ny.com/brands/">Brands We Service</a></li>
+         <li><a href="https://brooklyn-appliance-repair-ny.com/about/">About Us</a></li>
+         <li><a href="https://brooklyn-appliance-repair-ny.com/contact/">Contact Us</a></li>
+         <li class="submenu-toggle" id="serviceAreasToggle">Service Areas</li>
+         <div class="service-areas-submenu" id="serviceAreasSubmenu">
+           <li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/williamsburg/">Williamsburg</a></li>
+           <li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/park-slope/">Park Slope</a></li>
+           <li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/brooklyn-heights/">Brooklyn Heights</a></li>
+           <li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/bay-ridge/">Bay Ridge</a></li>
+           <li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/flatbush/">Flatbush</a></li>
+           <li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/">View All Areas</a></li>
+         </div>
+       </ul>
      </div>
+     <button class="nav-call-btn" id="navCallNow">📞 Call Now</button>
    </div>
  </div>
 </header>
@@ -500,12 +642,51 @@
 <div class="container">
 <p>© 2025 Brooklyn Appliance Repair. All rights reserved.</p>
 <p>Licensed & Insured • EPA Section 608 Certified • Same-Day Service Available</p>
+<p style="margin-top: 15px; font-size: 13px; opacity: 0.8;">Brooklyn Appliance Repair is a local service website operated by Lumina Appliance Repair LLC, a trusted appliance repair company with experienced technicians serving Brooklyn and nearby areas.</p>
 </div>
 </div>
 </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+ const servicesMenu = document.getElementById('servicesMenu');
+ const servicesToggle = document.getElementById('servicesToggle');
+ const dropdownCloseBtn = document.getElementById('dropdownCloseBtn');
+ const serviceAreasToggle = document.getElementById('serviceAreasToggle');
+ const serviceAreasSubmenu = document.getElementById('serviceAreasSubmenu');
+
+ function closeDropdown() {
+   servicesMenu.classList.remove('active');
+   if (serviceAreasSubmenu) serviceAreasSubmenu.style.maxHeight = '0';
+ }
+
+ if (servicesToggle) {
+   servicesToggle.addEventListener('click', function(e) {
+     e.stopPropagation();
+     servicesMenu.classList.toggle('active');
+   });
+ }
+
+ if (dropdownCloseBtn) {
+   dropdownCloseBtn.addEventListener('click', function(e) {
+     e.stopPropagation();
+     closeDropdown();
+   });
+ }
+
+ if (serviceAreasToggle) {
+   serviceAreasToggle.addEventListener('click', function(e) {
+     e.stopPropagation();
+     if (serviceAreasSubmenu.style.maxHeight && serviceAreasSubmenu.style.maxHeight !== '0px') {
+       serviceAreasSubmenu.style.maxHeight = '0';
+     } else {
+       serviceAreasSubmenu.style.maxHeight = serviceAreasSubmenu.scrollHeight + 'px';
+     }
+   });
+ }
+
+ document.addEventListener('click', closeDropdown);
+
  function setupCallButton(btn) {
    if (btn) {
      btn.addEventListener('click', function() {
