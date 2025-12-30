@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brooklyn-appliance-repair-ny.com/sitemap.xml
