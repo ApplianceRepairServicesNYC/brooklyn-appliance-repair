@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Appliance Repair Reviews | Brooklyn, NY</title>
+ <meta name="description" content="Read verified customer reviews for appliance repair services in Brooklyn, NY. Real feedback from Brooklyn, East New York, Bensonhurst, Gowanus and more.">
+ <meta name="keywords" content="appliance repair reviews Brooklyn, appliance repair testimonials NY, Sub-Zero repair reviews, Viking repair reviews, Thermador service reviews">
+ <meta name="author" content="Brooklyn Appliance Repair">
+ <meta name="robots" content="index, follow">
+ <link rel="canonical" href="https://brooklyn-appliance-repair-ny.com/reviews/">
+ <meta property="og:title" content="Appliance Repair Reviews in Brooklyn, NY">
+ <meta property="og:description" content="Read verified customer reviews for appliance repair services in Brooklyn, NY.">
+ <meta property="og:url" content="https://brooklyn-appliance-repair-ny.com/reviews/">
+ <meta property="og:type" content="website">
+ <link rel="icon" type="image/png" href="https://brooklyn-appliance-repair-ny.com/favicon.png" sizes="180x180">
+ <link rel="apple-touch-icon" href="https://brooklyn-appliance-repair-ny.com/favicon.png">
+ <link rel="shortcut icon" href="https://brooklyn-appliance-repair-ny.com/favicon.png">
+ <style>
+ :root {
+ --blue: #003087;
+ --red: #e41e26;
+ --gray: #f8f9fa;
+ }
+ body {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+ margin: 0;
+ color: #333;
+ background: #fff;
+ line-height: 1.6;
+ box-sizing: border-box;
+ overscroll-behavior: none;
+ }
+ h1, h2, h3 {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+ font-weight: 700;
+ color: var(--blue);
+ }
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+ box-sizing: border-box;
+ }
+ header {
+ background: var(--blue);
+ color: white;
+ padding: 20px 0;
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 1000;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ box-sizing: border-box;
+ }
+ .logo-link {
+ display: inline-flex;
+ align-items: center;
+ text-decoration: none;
+ }
+ .logo-link:hover {
+ opacity: 0.9;
+ }
+ .logo-svg {
+ height: 50px;
+ width: auto;
+ }
+ @media (max-width: 768px) {
+ .logo-svg {
+ height: 40px;
+ }
+ }
+ @media (max-width: 480px) {
+ .logo-svg {
+ height: 32px;
+ }
+ }
+ .nav-wrapper {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ }
+ .nav-right {
+ display: flex;
+ gap: 20px;
+ align-items: center;
+ flex-wrap: wrap;
+ }
+ .services-menu {
+ position: relative;
+ }
+ .services-btn {
+ color: white;
+ font-weight: 600;
+ cursor: pointer;
+ padding: 12px 20px;
+ border-radius: 6px;
+ transition: all .3s;
+ background: rgba(255, 255, 255, 0.1);
+ white-space: nowrap;
+ box-sizing: border-box;
+ }
+ .services-btn:hover {
+ background: rgba(255, 255, 255, 0.2);
+ }
+ .nav-call-btn {
+ background: var(--red);
+ color: white;
+ padding: 12px 28px;
+ border-radius: 6px;
+ font-weight: 700;
+ text-decoration: none;
+ font-size: 17px;
+ transition: all .3s;
+ cursor: pointer;
+ box-sizing: border-box;
+ border: none;
+ }
+ .nav-call-btn:hover {
+ background: #c41b20;
+ transform: translateY(-2px);
+ }
+ .services-dropdown {
+ display: none;
+ position: fixed;
+ top: 80px;
+ width: 420px;
+ min-width: 360px;
+ max-width: 95%;
+ min-height: 100px;
+ background: var(--blue);
+ border-radius: 12px;
+ box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+ padding: 32px 0;
+ z-index: 1000;
+ max-height: 80vh;
+ overflow-y: auto;
+ box-sizing: border-box;
+ overflow-wrap: break-word;
+ white-space: nowrap;
+ overscroll-behavior: contain;
+ }
+ .services-menu.active .services-dropdown {
+ display: block;
+ }
+ @media (hover: hover) and (pointer: fine) {
+ .services-menu:hover .services-dropdown {
+ display: block;
+ }
+ }
+ #servicesMenu .services-dropdown {
+ right: 20px;
+ }
+ .dropdown-close-btn {
+ position: absolute;
+ top: 12px;
+ right: 12px;
+ background: rgba(255, 255, 255, 0.15);
+ border: none;
+ color: white;
+ width: 36px;
+ height: 36px;
+ border-radius: 50%;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 20px;
+ transition: all .3s;
+ z-index: 10;
+ }
+ .dropdown-close-btn:hover {
+ background: var(--red);
+ transform: rotate(90deg);
+ }
+ @media (max-width: 768px) {
+ .services-dropdown {
+ width: 95%;
+ max-width: 420px;
+ min-width: 320px;
+ right: 2.5%;
+ padding: 15px 0;
+ top: 70px;
+ }
+ }
+ .services-dropdown li {
+ list-style: none;
+ }
+ .services-dropdown a,
+ .submenu-toggle {
+ display: block;
+ color: white;
+ padding: 14px 28px;
+ text-decoration: none;
+ transition: background .2s;
+ cursor: pointer;
+ }
+ .services-dropdown a:hover,
+ .submenu-toggle:hover {
+ background: rgba(255, 255, 255, 0.1);
+ }
+ .additional-submenu,
+ .service-areas-submenu {
+ max-height: 0;
+ overflow: hidden;
+ transition: max-height .3s ease-out;
+ background: rgba(0, 0, 0, 0.2);
+ }
+ .additional-submenu li,
+ .service-areas-submenu li {
+ padding: 10px 40px;
+ color: rgba(255, 255, 255, 0.85);
+ font-size: 14px;
+ }
+ .service-areas-submenu a {
+ padding: 10px 40px;
+ font-size: 14px;
+ }
+ main {
+ margin-top: 80px;
+ }
+ .hero {
+ padding: 80px 0;
+ text-align: center;
+ background: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url('/assets/images/appliances/hero-appliances.webp') center center/cover no-repeat;
+ color: white;
+ }
+ .hero h1 {
+ font-size: 44px;
+ margin: 0 0 15px;
+ color: white;
+ }
+ .hero p {
+ font-size: 18px;
+ margin: 0 0 25px;
+ opacity: 0.9;
+ }
+ .btn {
+ display: inline-block;
+ background: var(--red);
+ color: white;
+ padding: 15px 35px;
+ border-radius: 6px;
+ font-weight: 700;
+ text-decoration: none;
+ font-size: 18px;
+ transition: all .3s;
+ cursor: pointer;
+ border: none;
+ }
+ .btn:hover {
+ background: #c41b20;
+ transform: translateY(-2px);
+ }
+ @media (max-width: 768px) {
+ main {
+ margin-top: 70px;
+ }
+ .hero {
+ padding: 60px 0;
+ }
+ .hero h1 {
+ font-size: 32px;
+ }
+ .hero p {
+ font-size: 16px;
+ }
+ }
+ @media (max-width: 480px) {
+ main {
+ margin-top: 60px;
+ }
+ .hero {
+ padding: 50px 0;
+ }
+ .hero h1 {
+ font-size: 26px;
+ }
+ .hero p {
+ font-size: 14px;
+ }
+ }
+ .alt {
+ background: var(--gray);
+ }
+ section {
+ padding: 60px 0;
+ }
+ .intro-text {
+ max-width: 900px;
+ margin: 0 auto;
+ font-size: 17px;
+ line-height: 1.8;
+ color: #444;
+ }
+ .reviews-grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 25px;
+ margin-top: 40px;
+ }
+ @media (max-width: 768px) {
+ .reviews-grid {
+ grid-template-columns: 1fr;
+ }
+ }
+ .review-card {
+ background: #fff;
+ border-radius: 12px;
+ padding: 25px;
+ box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+ border-left: 4px solid var(--blue);
+ }
+ .review-stars {
+ color: #ffc107;
+ font-size: 22px;
+ letter-spacing: 2px;
+ margin-bottom: 12px;
+ }
+ .review-text {
+ font-size: 15px;
+ line-height: 1.7;
+ color: #444;
+ margin-bottom: 15px;
+ font-style: italic;
+ }
+ .review-meta {
+ font-size: 14px;
+ color: #666;
+ }
+ .review-meta strong {
+ color: var(--blue);
+ }
+ .cta-box {
+ background: linear-gradient(135deg, var(--blue) 0%, #0052cc 100%);
+ color: white;
+ padding: 50px 40px;
+ border-radius: 16px;
+ text-align: center;
+ margin: 50px 0;
+ }
+ .cta-box h2 {
+ color: white;
+ margin: 0 0 15px;
+ font-size: 28px;
+ }
+ .cta-box p {
+ margin: 0 0 25px;
+ opacity: 0.9;
+ font-size: 17px;
+ }
+ .cta-box .btn {
+ background: #ffc107;
+ color: #333;
+ font-size: 17px;
+ }
+ .cta-box .btn:hover {
+ background: #e0a800;
+ }
+ .trust-section {
+ background: #e8f4e8;
+ border-left: 4px solid #28a745;
+ padding: 25px 30px;
+ border-radius: 8px;
+ margin: 40px 0;
+ }
+ .trust-section h3 {
+ color: #28a745;
+ margin: 0 0 10px;
+ }
+ .trust-section p {
+ margin: 0;
+ color: #444;
+ line-height: 1.7;
+ }
+ .faq-section h2 {
+ text-align: center;
+ margin-bottom: 30px;
+ }
+ .faq-item {
+ background: #fff;
+ border-radius: 8px;
+ padding: 25px;
+ margin-bottom: 15px;
+ box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+ }
+ .faq-item h3 {
+ font-size: 17px;
+ margin: 0 0 12px;
+ color: var(--blue);
+ }
+ .faq-item p {
+ margin: 0;
+ color: #555;
+ line-height: 1.7;
+ }
+ .links-section {
+ background: var(--gray);
+ padding: 30px;
+ border-radius: 12px;
+ margin: 40px 0;
+ }
+ .links-section h3 {
+ margin: 0 0 20px;
+ font-size: 18px;
+ }
+ .links-section ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 20px 30px;
+ }
+ .links-section a {
+ color: var(--blue);
+ text-decoration: none;
+ font-weight: 600;
+ }
+ .links-section a:hover {
+ text-decoration: underline;
+ }
+ .footer-main {
+ background: #1a1a1a;
+ color: #ccc;
+ padding: 50px 0 30px;
+ }
+ .footer-grid {
+ display: grid;
+ grid-template-columns: 2fr 1fr 1fr 1fr;
+ gap: 40px;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+ }
+ .footer-column h2,
+ .footer-column h3 {
+ color: #fff;
+ font-size: 18px;
+ margin: 0 0 20px;
+ }
+ .footer-column p {
+ margin: 5px 0;
+ font-size: 14px;
+ line-height: 1.6;
+ }
+ .footer-column ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ }
+ .footer-column ul li {
+ margin-bottom: 10px;
+ }
+ .footer-column ul a {
+ color: #ccc;
+ text-decoration: none;
+ font-size: 14px;
+ transition: color 0.3s;
+ }
+ .footer-column ul a:hover {
+ color: #fff;
+ }
+ .footer-hours {
+ background: rgba(255,255,255,0.05);
+ padding: 15px;
+ border-radius: 8px;
+ margin-top: 20px;
+ }
+ .footer-hours p {
+ margin: 5px 0;
+ }
+ .footer-bottom {
+ background: #0d0d0d;
+ padding: 25px 0;
+ }
+ .footer-bottom-content {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+ }
+ .footer-bottom p {
+ margin: 8px 0;
+ font-size: 13px;
+ color: #888;
+ text-align: center;
+ }
+ @media (max-width: 992px) {
+ .footer-grid {
+ grid-template-columns: 1fr 1fr;
+ }
+ }
+ @media (max-width: 600px) {
+ .footer-grid {
+ grid-template-columns: 1fr;
+ }
+ }
+ </style>
+</head>
+<body>
+ <header>
+ <div class="container nav-wrapper">
+ <a href="https://brooklyn-appliance-repair-ny.com/" class="logo-link" aria-label="Return to Brooklyn Appliance Repair Homepage"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 55" class="logo-svg"><defs><linearGradient id="fridgeGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#e8ecf1"/><stop offset="100%" style="stop-color:#c5cdd8"/></linearGradient><linearGradient id="badgeGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#3b6cb5"/><stop offset="100%" style="stop-color:#1e3a6e"/></linearGradient></defs><circle cx="27" cy="27.5" r="25" fill="url(#badgeGrad)" stroke="#5a8ad4" stroke-width="2"/><rect x="14" y="8" width="22" height="38" rx="2" fill="url(#fridgeGrad)" stroke="#8896a7" stroke-width="1"/><rect x="15" y="9" width="20" height="12" rx="1" fill="#f5f7fa" stroke="#a0aec0" stroke-width="0.5"/><rect x="32" y="12" width="2" height="6" rx="0.5" fill="#6b7c8f"/><rect x="15" y="23" width="20" height="22" rx="1" fill="#f5f7fa" stroke="#a0aec0" stroke-width="0.5"/><rect x="32" y="28" width="2" height="12" rx="0.5" fill="#6b7c8f"/><g transform="translate(6, 20) rotate(-30)"><rect x="0" y="8" width="4" height="18" rx="1" fill="#f97316"/><path d="M-2 4 L2 0 L6 4 L6 10 L4 10 L4 7 L2 5 L0 7 L0 10 L-2 10 Z" fill="#71717a"/></g><text x="58" y="24" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#ffffff" letter-spacing="0.5">BROOKLYN</text><text x="58" y="43" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#f97316" letter-spacing="1.5">APPLIANCE REPAIR</text></svg></a>
+ <div class="nav-right">
+ <div class="services-menu" id="servicesMenu">
+ <div class="services-btn" id="servicesToggle">Services</div>
+ <ul class="services-dropdown" id="servicesDropdown">
+ <button class="dropdown-close-btn" id="dropdownCloseBtn" aria-label="Close Services Menu">×</button>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/washer-repair/" aria-label="Washer Repair">Washer Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/dryer-repair/" aria-label="Dryer Repair">Dryer Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/refrigerator-repair/" aria-label="Refrigerator Repair">Refrigerator Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/dishwasher-repair/" aria-label="Dishwasher Repair">Dishwasher Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/oven-repair/" aria-label="Oven & Range Repair">Oven & Range Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/cooktop-repair/" aria-label="Cooktop Repair">Cooktop Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/microwave-repair/" aria-label="Microwave Repair">Microwave Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/wine-cooler-repair/" aria-label="Wine Cooler Repair">Wine Cooler Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/installation-maintenance/" aria-label="Installation & Maintenance">Installation & Maintenance</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/" aria-label="All Appliances Repair">All Appliances</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/reviews/" aria-label="Customer Reviews">★ Reviews</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/brands/" aria-label="Brands We Service">Brands We Service</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/about/" aria-label="About Us">About Us</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/contact/" aria-label="Contact Us">Contact Us</a></li>
+ <li class="submenu-toggle" id="additionalToggle">Additional Services</li>
+ <div class="additional-submenu" id="additionalSubmenu">
+ <li>Installation, Repair & Maintenance</li>
+ <li>Refrigerator Compressor & Refrigerant Service</li>
+ <li>Appliance Performance Optimization</li>
+ <li>Appliance Relocation & Setup Assistance</li>
+ <li>Smart Appliance Connectivity Support</li>
+ <li>Professional Deep Cleaning Services</li>
+ <li>Energy Efficiency Upgrades & Optimization</li>
+ <li>Noise & Vibration Reduction Services</li>
+ <li>Commercial & Multi-Unit Appliance Services</li>
+ <li>Recalls & Safety Compliance</li>
+ <li>EPA Section 608 Certification</li>
+ <li>Appliance Warranty & Extended Service Plans</li>
+ </div>
+ <li class="submenu-toggle" id="serviceAreasToggle">Service Areas</li>
+ <div class="service-areas-submenu" id="serviceAreasSubmenu">
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/williamsburg/">Williamsburg</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/greenpoint/">Greenpoint</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/bushwick/">Bushwick</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/bedford-stuyvesant/">Bedford-Stuyvesant</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/crown-heights/">Crown Heights</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/fort-greene/">Fort Greene</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/clinton-hill/">Clinton Hill</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/downtown-brooklyn/">Downtown Brooklyn</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/brooklyn-heights/">Brooklyn Heights</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/dumbo/">DUMBO</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/red-hook/">Red Hook</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/carroll-gardens/">Carroll Gardens</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/park-slope/">Park Slope</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/gowanus/">Gowanus</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/sunset-park/">Sunset Park</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/bay-ridge/">Bay Ridge</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/bensonhurst/">Bensonhurst</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/dyker-heights/">Dyker Heights</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/brighton-beach/">Brighton Beach</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/coney-island/">Coney Island</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/flatbush/">Flatbush</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/east-new-york/">East New York</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/sheepshead-bay/">Sheepshead Bay</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/marine-park/">Marine Park</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/canarsie/">Canarsie</a></li>
+</div>
+ </ul>
+ </div>
+ <button class="nav-call-btn" id="navCallNow">📞 Call Now</button>
+ </div>
+ </div>
+ </header>
+
+ <main>
+ <section class="hero">
+ <div class="container">
+ <h1>Appliance Repair Reviews in Brooklyn, NY</h1>
+ <p>Real Feedback From Local Customers • Verified Service Excellence</p>
+ </div>
+ </section>
+
+ <section>
+ <div class="container">
+ <div class="intro-text">
+ <p>Homeowners throughout Brooklyn, NY trust our team to repair their most valuable kitchen and laundry appliances. From Brooklyn to East New York, Bensonhurst to Gowanus, and communities like Mount Kisco and Bay Ridge, we've built our reputation on reliable service and honest work. Our technicians specialize in high-end brands including Sub-Zero, Viking, Thermador, Miele, and Bosch, as well as everyday household names. We understand that when your refrigerator stops cooling or your oven won't heat, you need a solution fast. That's why we focus on same-day appointments and first-visit repairs whenever possible. Below you'll find feedback from real customers who have experienced our commitment to quality appliance repair across Brooklyn.</p>
+ </div>
+
+ <h2 style="text-align: center; margin-top: 50px;">What Our Customers Say</h2>
+ 
+ <div class="reviews-grid">
+ <div class="review-card">
+ <div class="review-stars">★★★★★</div>
+ <p class="review-text">"The technician diagnosed our Sub-Zero refrigerator issue within minutes and had it running perfectly the same day. Professional service from start to finish."</p>
+ <p class="review-meta"><strong>Sub-Zero Refrigerator</strong> · Brooklyn, NY</p>
+ </div>
+
+ <div class="review-card">
+ <div class="review-stars">★★★★★</div>
+ <p class="review-text">"Our Viking range had been giving us problems for weeks. The repair was completed quickly and the pricing was exactly as quoted. Highly recommend."</p>
+ <p class="review-meta"><strong>Viking Range</strong> · Bensonhurst, NY</p>
+ </div>
+
+ <div class="review-card">
+ <div class="review-stars">★★★★★</div>
+ <p class="review-text">"Fast response time for our broken Bosch dishwasher. The technician was knowledgeable and explained everything clearly. Works like new now."</p>
+ <p class="review-meta"><strong>Bosch Dishwasher</strong> · East New York, NY</p>
+ </div>
+
+ <div class="review-card">
+ <div class="review-stars">★★★★★</div>
+ <p class="review-text">"Called about our Thermador cooktop not igniting. They came out the same afternoon and fixed it on the spot. Excellent service."</p>
+ <p class="review-meta"><strong>Thermador Cooktop</strong> · Bay Ridge, NY</p>
+ </div>
+
+ <div class="review-card">
+ <div class="review-stars">★★★★★</div>
+ <p class="review-text">"Our Miele washing machine stopped draining completely. The technician identified a pump issue and had parts on hand. Very impressed with the efficiency."</p>
+ <p class="review-meta"><strong>Miele Washer</strong> · Gowanus, NY</p>
+ </div>
+
+ <div class="review-card">
+ <div class="review-stars">★★★★★</div>
+ <p class="review-text">"Needed emergency repair on our refrigerator over the weekend. They accommodated our schedule and saved all our food. Can't thank them enough."</p>
+ <p class="review-meta"><strong>GE Refrigerator</strong> · Mount Kisco, NY</p>
+ </div>
+
+ <div class="review-card">
+ <div class="review-stars">★★★★★</div>
+ <p class="review-text">"The dryer wasn't heating at all. Technician arrived on time, found a faulty heating element, and replaced it within an hour. Great communication throughout."</p>
+ <p class="review-meta"><strong>Samsung Dryer</strong> · Greenpoint, NY</p>
+ </div>
+
+ <div class="review-card">
+ <div class="review-stars">★★★★★</div>
+ <p class="review-text">"Professional, courteous, and clearly experienced with high-end appliances. Fixed our Wolf oven temperature calibration issue perfectly."</p>
+ <p class="review-meta"><strong>Wolf Oven</strong> · Red Hook, NY</p>
+ </div>
+
+ <div class="review-card">
+ <div class="review-stars">★★★★★</div>
+ <p class="review-text">"Second time using this service. Both experiences have been excellent. They repaired our KitchenAid refrigerator ice maker with no issues."</p>
+ <p class="review-meta"><strong>KitchenAid Refrigerator</strong> · Bedford-Stuyvesant, NY</p>
+ </div>
+
+ <div class="review-card">
+ <div class="review-stars">★★★★★</div>
+ <p class="review-text">"Our LG front-load washer had a door seal problem. Clean repair, fair price, and the technician even showed us maintenance tips. Wonderful experience."</p>
+ <p class="review-meta"><strong>LG Washer</strong> · Dyker Heights, NY</p>
+ </div>
+ </div>
+
+<style>
+.reviews-accordion{margin:40px auto;max-width:1000px;padding:0 20px;text-align:center}
+.reviews-accordion input[type="checkbox"]{display:none}
+.reviews-accordion label{display:flex;align-items:center;justify-content:center;gap:20px;background:linear-gradient(135deg,#003087 0%,#0052cc 50%,#003087 100%);color:#fff;padding:25px 35px;border-radius:16px;cursor:pointer;font-weight:700;font-size:18px;box-shadow:0 8px 30px rgba(0,48,135,0.3);transition:all 0.3s ease;margin:0 auto;border:3px solid #ffc107;position:relative;overflow:hidden}
+.reviews-accordion label:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,48,135,0.4)}
+.reviews-accordion label::after{content:'⭐';position:absolute;font-size:80px;opacity:0.1;right:20px;top:50%;transform:translateY(-50%)}
+.reviews-accordion label .stars{color:#ffc107;font-size:28px;letter-spacing:3px;text-shadow:0 2px 10px rgba(0,0,0,0.3)}
+.reviews-accordion label .text{text-align:left}
+.reviews-accordion label .text .title{font-size:20px;display:block;margin-bottom:4px}
+.reviews-accordion label .text .subtitle{font-size:13px;opacity:0.9;display:block;font-weight:400}
+.reviews-accordion label .arrow{color:#ffc107;font-size:28px;animation:bounce-right 1s ease-in-out infinite}
+@media (max-width: 768px) {
+.reviews-accordion label{padding:18px 20px;gap:12px;border-radius:12px;font-size:16px}
+.reviews-accordion label::after{font-size:50px;right:10px}
+.reviews-accordion label .stars{font-size:20px;letter-spacing:2px}
+.reviews-accordion label .text .title{font-size:16px}
+.reviews-accordion label .text .subtitle{font-size:11px}
+.reviews-accordion label .arrow{font-size:22px}
+}
+@media (max-width: 480px) {
+.reviews-accordion label{padding:15px 16px;gap:10px;border-radius:10px;flex-wrap:wrap}
+.reviews-accordion label::after{display:none}
+.reviews-accordion label .stars{font-size:18px;letter-spacing:1px}
+.reviews-accordion label .text .title{font-size:15px}
+.reviews-accordion label .text .subtitle{font-size:10px}
+.reviews-accordion label .arrow{font-size:20px}
+}
+@keyframes bounce-right{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+.reviews-accordion .reviews-content{max-height:0;overflow:hidden;transition:max-height 0.5s ease,overflow 0s 0.5s;background:linear-gradient(180deg,#f8f9fa 0%,#e9ecef 100%);border-radius:0 0 12px 12px;margin:-5px auto 0;max-width:900px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.reviews-accordion input:checked~.reviews-content{max-height:none;padding:30px;overflow:visible}
+.reviews-accordion input:checked~label{border-radius:8px 8px 0 0}
+.reviews-header{text-align:center;margin-bottom:20px}
+.reviews-header h2{color:#003087;font-size:24px;margin-bottom:10px}
+.reviews-stars{color:#ffc107;font-size:28px;letter-spacing:2px}
+.reviews-count{color:#666;font-size:14px;margin-top:8px}
+.reviews-content [class^="elfsight-app"]{width:100%;margin:0 auto;min-height:auto;max-height:none;overflow:visible}
+.reviews-content [class^="elfsight-app"] *{max-height:none !important}
+</style>
+<div class="reviews-accordion">
+<input type="checkbox" id="reviewsToggle">
+<label for="reviewsToggle"><span class="stars">★★★★★</span><span class="text"><span class="title">Read Our Customer Reviews</span><span class="subtitle">Excellent on Google • 5-Star Service</span></span><span class="arrow">→</span></label>
+<div class="reviews-content">
+<div class="reviews-header"><h2 style="font-size: 24px; margin-bottom: 10px;">Google Business Profile</h2><div class="reviews-stars">★★★★★</div><div class="reviews-count">Excellent on Google</div></div>
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-1634a6d6-e2fc-4121-bbd0-0f75968833a4" data-elfsight-app-lazy></div>
+</div></div>
+
+ <div class="trust-section">
+ <h3>✓ Verified Customer Reviews</h3>
+ <p>Every review represents a real appliance repair completed by our licensed and insured technicians serving Brooklyn. Our team undergoes factory training for all major brands, and we stand behind our work with a satisfaction guarantee. From routine maintenance to complex repairs, we're committed to delivering honest, reliable service to every home across Brooklyn, NY.</p>
+ </div>
+ </div>
+ </section>
+
+ <section class="alt faq-section">
+ <div class="container">
+ <h2>Frequently Asked Questions</h2>
+ 
+ <div class="faq-item">
+ <h3>Are these reviews from real customers?</h3>
+ <p>Yes. All reviews reflect genuine feedback from homeowners in Brooklyn who have used our appliance repair services. We encourage customers to share their experiences on Google after each completed repair.</p>
+ </div>
+
+ <div class="faq-item">
+ <h3>Do you service high-end appliance brands?</h3>
+ <p>Absolutely. Our technicians receive specialized training for premium brands including Sub-Zero, Viking, Thermador, Wolf, Miele, and Bosch. We carry manufacturer-approved parts and follow factory repair procedures.</p>
+ </div>
+
+ <div class="faq-item">
+ <h3>How quickly can you respond to a service request?</h3>
+ <p>We offer same-day appointments throughout Brooklyn for most repair requests. Our dispatch team works to schedule technicians efficiently across Brooklyn, East New York, Bensonhurst, Gowanus, and surrounding areas.</p>
+ </div>
+
+ <div class="faq-item">
+ <h3>Are your technicians licensed and insured?</h3>
+ <p>Yes. All of our appliance repair technicians are fully licensed, insured, and background-checked. We maintain EPA Section 608 certification for refrigerant handling and complete ongoing manufacturer training programs.</p>
+ </div>
+ </div>
+ </section>
+
+ <section>
+ <div class="container">
+ <div class="links-section">
+ <h3>Explore Our Services</h3>
+ <ul>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/">Home</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/washer-repair/">Washer Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/dryer-repair/">Dryer Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/refrigerator-repair/">Refrigerator Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/dishwasher-repair/">Dishwasher Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/oven-repair/">Oven Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/microwave-repair/">Microwave Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/cooktop-repair/">Cooktop Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/wine-cooler-repair/">Wine Cooler Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/vent-hood-repair/">Vent Hood Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/installation-maintenance/">Installation & Maintenance</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/">Service Areas</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/#contact">Schedule Service</a></li>
+ </ul>
+ </div>
+ </div>
+ </section>
+ </main>
+
+<!-- Silo Links Section -->
+<section style="padding: 35px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+<div class="container" style="max-width: 900px; margin: 0 auto; text-align: center;">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+<a href="https://brooklyn-appliance-repair-ny.com/" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #003087; font-weight: 600; font-size: 14px; padding: 14px 24px; background: white; border-radius: 50px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #e0e0e0;">
+<span style="font-size: 16px;">🏠</span>
+<span>All Repair Services</span>
+</a>
+<a href="https://brooklyn-appliance-repair-ny.com/brands/" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #003087; font-weight: 600; font-size: 14px; padding: 14px 24px; background: white; border-radius: 50px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #e0e0e0;">
+<span style="font-size: 16px;">🏷️</span>
+<span>View All Brands</span>
+</a>
+<a href="https://brooklyn-appliance-repair-ny.com/contact/" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #003087; font-weight: 600; font-size: 14px; padding: 14px 24px; background: white; border-radius: 50px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #e0e0e0;">
+<span style="font-size: 16px;">📞</span>
+<span>Contact Us</span>
+</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="footer-main">
+<div class="footer-grid">
+<div class="footer-column footer-brand">
+<h2>Brooklyn Appliance Repair</h2>
+<p><strong>Brooklyn, New York</strong></p>
+<p>Brooklyn, NY 10601</p>
+<p style="margin-top: 15px;">Professional appliance repair serving all of Brooklyn. Same-day service available for all major appliance brands and types.</p>
+<div class="footer-hours">
+<p><strong>Business Hours</strong></p>
+<p>Monday - Sunday<br>7:00 AM – 9:00 PM</p>
+</div>
+</div>
+
+<div class="footer-column">
+<h3>Our Services</h3>
+<ul>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/washer-repair/">Washer Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/dryer-repair/">Dryer Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/refrigerator-repair/">Refrigerator Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/dishwasher-repair/">Dishwasher Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/oven-repair/">Oven Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/microwave-repair/">Microwave Repair</a></li>
+</ul>
+</div>
+
+<div class="footer-column">
+<h3>More Services</h3>
+<ul>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/cooktop-repair/">Cooktop Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/wine-cooler-repair/">Wine Cooler Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/vent-hood-repair/">Vent Hood Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/installation-maintenance/">Installation & Maintenance</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/">All Appliances</a></li>
+</ul>
+</div>
+
+<div class="footer-column">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="https://brooklyn-appliance-repair-ny.com/">Home</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/reviews/">Reviews</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brands/">Brands</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/about/">About Us</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/contact/">Contact Us</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/">Service Areas</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/#contact">Schedule Service</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/epa-certified/">EPA Certified</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/sitemap/">Sitemap</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/privacy-policy.html">Privacy Policy</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/terms-of-service.html">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="footer-bottom">
+<div class="footer-bottom-content">
+<p>© 2025 Brooklyn Appliance Repair. All Rights Reserved.</p>
+<p>Licensed & Insured • Professional Technicians • Same-Day Service Available</p>
+<p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Brooklyn Appliance Repair is a local service website operated by Lumina Appliance Repair LLC, a trusted appliance repair company with experienced technicians serving Brooklyn and nearby areas.</p>
+</div>
+</div>
+</footer>
+
+ <script>
+ document.addEventListener('DOMContentLoaded', function() {
+ const servicesMenu = document.getElementById('servicesMenu');
+ const servicesToggle = document.getElementById('servicesToggle');
+ const dropdownCloseBtn = document.getElementById('dropdownCloseBtn');
+ const additionalToggle = document.getElementById('additionalToggle');
+ const additionalSubmenu = document.getElementById('additionalSubmenu');
+ const serviceAreasToggle = document.getElementById('serviceAreasToggle');
+ const serviceAreasSubmenu = document.getElementById('serviceAreasSubmenu');
+ 
+ function closeDropdown() {
+ servicesMenu.classList.remove('active');
+ additionalSubmenu.style.maxHeight = '0';
+ serviceAreasSubmenu.style.maxHeight = '0';
+ }
+ 
+ if (servicesToggle) {
+ servicesToggle.addEventListener('click', function(e) {
+ e.stopPropagation();
+ servicesMenu.classList.toggle('active');
+ });
+ }
+ 
+ if (dropdownCloseBtn) {
+ dropdownCloseBtn.addEventListener('click', function(e) {
+ e.stopPropagation();
+ closeDropdown();
+ });
+ }
+ 
+ if (additionalToggle) {
+ additionalToggle.addEventListener('click', function(e) {
+ e.stopPropagation();
+ if (additionalSubmenu.style.maxHeight && additionalSubmenu.style.maxHeight !== '0px') {
+ additionalSubmenu.style.maxHeight = '0';
+ } else {
+ additionalSubmenu.style.maxHeight = additionalSubmenu.scrollHeight + 'px';
+ }
+ });
+ }
+ 
+ if (serviceAreasToggle) {
+ serviceAreasToggle.addEventListener('click', function(e) {
+ e.stopPropagation();
+ if (serviceAreasSubmenu.style.maxHeight && serviceAreasSubmenu.style.maxHeight !== '0px') {
+ serviceAreasSubmenu.style.maxHeight = '0';
+ } else {
+ serviceAreasSubmenu.style.maxHeight = serviceAreasSubmenu.scrollHeight + 'px';
+ }
+ });
+ }
+ 
+ const additionalItems = additionalSubmenu.querySelectorAll('li');
+ additionalItems.forEach(function(item) {
+ item.addEventListener('click', function(e) {
+ e.stopPropagation();
+ });
+ });
+ 
+ document.addEventListener('click', closeDropdown);
+ 
+ function setupCallButton(btn) {
+ if (btn) {
+ btn.addEventListener('click', function() {
+ if (this.dataset.revealed) return;
+ const digits = [8, 0, 0, 3, 6, 8, 1, 9, 5, 8];
+ const num = digits.join('');
+ const formatted = '+1 (' + num.slice(0,3) + ') ' + num.slice(3,6) + '-' + num.slice(6);
+ this.innerHTML = formatted;
+ this.dataset.revealed = 'true';
+ this.onclick = function() {
+ window.location.href = 'tel:+1' + num;
+ };
+ });
+ }
+ }
+ 
+ setupCallButton(document.getElementById('navCallNow'));
+ });
+ </script>
+</body>
+</html>
