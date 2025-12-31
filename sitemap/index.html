@@ -12,10 +12,114 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-header { background: var(--blue); color: white; padding: 20px 0; }
-header h1 { font-size: 24px; }
-header a { color: white; text-decoration: none; }
-main { padding: 40px 0; }
+
+/* Header styles from homepage */
+header {
+  background: var(--blue);
+  color: white;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.nav-wrapper { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.nav-right { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+.logo-link { display: inline-flex; align-items: center; text-decoration: none; }
+.logo-link:hover { opacity: 0.9; }
+.logo-svg { height: 50px; width: auto; }
+.services-menu { position: relative; }
+.services-btn {
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 6px;
+  transition: all .3s;
+  background: rgba(255,255,255,0.1);
+  white-space: nowrap;
+}
+.services-btn:hover { background: rgba(255,255,255,0.2); }
+.nav-call-btn {
+  background: var(--red);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 17px;
+  transition: all .3s;
+  cursor: pointer;
+  border: none;
+}
+.nav-call-btn:hover { background: #a30f1c; transform: translateY(-2px); }
+.services-dropdown {
+  display: none;
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 420px;
+  max-width: 95%;
+  background: var(--blue);
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  padding: 32px 0;
+  z-index: 1000;
+  max-height: 80vh;
+  overflow-y: auto;
+  list-style: none;
+}
+.services-menu.active .services-dropdown { display: block; }
+.services-dropdown li {
+  padding: 12px 36px;
+  color: #eee;
+  font-size: 16px;
+  transition: all .3s;
+  cursor: pointer;
+  list-style: none;
+}
+.services-dropdown li:hover { background: var(--red); color: white; padding-left: 46px; }
+.services-dropdown a { color: inherit; text-decoration: none; display: block; }
+.dropdown-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all .3s;
+}
+.dropdown-close-btn:hover { background: var(--red); }
+.submenu-toggle {
+  font-weight: 700;
+  background: rgba(255,255,255,0.15);
+  margin: 14px 20px;
+  border-radius: 8px;
+  padding: 12px 24px !important;
+}
+.service-areas-submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background: rgba(0,0,0,0.2);
+  margin: 0 20px;
+  border-radius: 8px;
+}
+@media (max-width: 768px) {
+  .nav-wrapper { flex-direction: column; padding: 15px 0; }
+  .logo-svg { height: 40px; }
+  .nav-right { width: 100%; justify-content: center; gap: 15px; margin-top: 10px; }
+  .services-dropdown { left: 50%; transform: translateX(-50%); right: auto; width: 95%; }
+}
+
+/* Main content */
+main { padding: 120px 0 40px; }
 h1 { color: var(--blue); margin-bottom: 20px; font-size: 32px; }
 h2 { color: var(--blue); margin: 30px 0 15px; padding-bottom: 10px; border-bottom: 2px solid #eee; font-size: 24px; }
 h3 { color: #555; margin: 20px 0 10px; font-size: 18px; }
@@ -24,22 +128,54 @@ h3 { color: #555; margin: 20px 0 10px; font-size: 18px; }
 .sitemap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
 ul { list-style: none; }
 li { margin: 5px 0; }
-a { color: var(--blue); text-decoration: none; transition: color 0.3s; }
-a:hover { color: var(--red); text-decoration: underline; }
+main a { color: var(--blue); text-decoration: none; transition: color 0.3s; }
+main a:hover { color: var(--red); text-decoration: underline; }
 .brand-group, .town-group { margin-bottom: 25px; background: #f8f9fa; padding: 15px 20px; border-radius: 8px; }
 .brand-group h3, .town-group h3 { margin-top: 0; color: var(--blue); }
 .stats { background: linear-gradient(135deg, #003087 0%, #0052cc 100%); color: white; padding: 30px; border-radius: 12px; margin-bottom: 40px; }
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; text-align: center; }
-.stat-item h3 { font-size: 36px; margin-bottom: 5px; }
+.stat-item h3 { font-size: 36px; margin-bottom: 5px; color: white; }
 .stat-item p { opacity: 0.9; }
+.stat-item a { color: white !important; text-decoration: none; }
+.stat-item a:hover { text-decoration: underline; }
 footer { background: #1a1a2e; color: white; padding: 30px 0; text-align: center; }
 footer a { color: #ffc107; }
 </style>
 </head>
 <body>
 <header>
-<div class="container">
-<a href="https://brooklyn-appliance-repair-ny.com/"><h1>Brooklyn Appliance Repair</h1></a>
+<div class="container nav-wrapper">
+<a href="https://brooklyn-appliance-repair-ny.com/" class="logo-link" aria-label="Return to Brooklyn Appliance Repair Homepage"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 55" class="logo-svg"><defs><linearGradient id="fridgeGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#e8ecf1"/><stop offset="100%" style="stop-color:#c5cdd8"/></linearGradient><linearGradient id="badgeGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#3b6cb5"/><stop offset="100%" style="stop-color:#1e3a6e"/></linearGradient></defs><circle cx="27" cy="27.5" r="25" fill="url(#badgeGrad)" stroke="#5a8ad4" stroke-width="2"/><rect x="14" y="8" width="22" height="38" rx="2" fill="url(#fridgeGrad)" stroke="#8896a7" stroke-width="1"/><rect x="15" y="9" width="20" height="12" rx="1" fill="#f5f7fa" stroke="#a0aec0" stroke-width="0.5"/><rect x="32" y="12" width="2" height="6" rx="0.5" fill="#6b7c8f"/><rect x="15" y="23" width="20" height="22" rx="1" fill="#f5f7fa" stroke="#a0aec0" stroke-width="0.5"/><rect x="32" y="28" width="2" height="12" rx="0.5" fill="#6b7c8f"/><g transform="translate(6, 20) rotate(-30)"><rect x="0" y="8" width="4" height="18" rx="1" fill="#f97316"/><path d="M-2 4 L2 0 L6 4 L6 10 L4 10 L4 7 L2 5 L0 7 L0 10 L-2 10 Z" fill="#71717a"/></g><text x="58" y="24" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#ffffff" letter-spacing="0.5">BROOKLYN</text><text x="58" y="43" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#f97316" letter-spacing="1.5">APPLIANCE REPAIR</text></svg></a>
+<div class="nav-right">
+<div class="services-menu" id="servicesMenu">
+<div class="services-btn" id="servicesToggle">Services</div>
+<ul class="services-dropdown" id="servicesDropdown">
+<button class="dropdown-close-btn" id="dropdownCloseBtn" aria-label="Close">×</button>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/washer-repair/">Washer Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/dryer-repair/">Dryer Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/refrigerator-repair/">Refrigerator Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/dishwasher-repair/">Dishwasher Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/oven-repair/">Oven & Range Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/cooktop-repair/">Cooktop Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/microwave-repair/">Microwave Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/appliances/wine-cooler-repair/">Wine Cooler Repair</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/">All Appliances</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/reviews/">★ Reviews</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brands/">Brands We Service</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/about/">About Us</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/contact/">Contact Us</a></li>
+<li class="submenu-toggle" id="serviceAreasToggle">Service Areas</li>
+<div class="service-areas-submenu" id="serviceAreasSubmenu">
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/williamsburg/">Williamsburg</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/park-slope/">Park Slope</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/brooklyn-heights/">Brooklyn Heights</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/bay-ridge/">Bay Ridge</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/">View All Areas</a></li>
+</div>
+</ul>
+</div>
+<button class="nav-call-btn" id="navCallNow">📞 Call Now</button>
+</div>
 </div>
 </header>
 
@@ -52,19 +188,19 @@ footer a { color: #ffc107; }
 <div class="stats-grid">
 <div class="stat-item">
 <h3>🔧</h3>
-<p><a href="#appliances" style="color: white;">Appliance Services</a></p>
+<p><a href="#appliances">Appliance Services</a></p>
 </div>
 <div class="stat-item">
 <h3>🏷️</h3>
-<p><a href="#brands" style="color: white;">Brands We Service</a></p>
+<p><a href="#brands">Brands We Service</a></p>
 </div>
 <div class="stat-item">
 <h3>📍</h3>
-<p><a href="#locations" style="color: white;">Service Areas</a></p>
+<p><a href="#locations">Service Areas</a></p>
 </div>
 <div class="stat-item">
 <h3>📞</h3>
-<p><a href="https://brooklyn-appliance-repair-ny.com/contact/" style="color: white;">Contact Us</a></p>
+<p><a href="https://brooklyn-appliance-repair-ny.com/contact/">Contact Us</a></p>
 </div>
 </div>
 </div>
@@ -103,7 +239,7 @@ footer a { color: #ffc107; }
 </section>
 
 <section class="sitemap-section">
-<h2>Brands We Service (238 pages)</h2>
+<h2 id="brands">Brands We Service</h2>
 <div class="brand-group">
 <h3>A</h3>
 <ul class="sitemap-grid">
@@ -427,7 +563,7 @@ footer a { color: #ffc107; }
 </section>
 
 <section class="sitemap-section">
-<h2>Service Locations in Brooklyn (661 pages)</h2>
+<h2 id="locations">Service Locations in Brooklyn</h2>
 <div class="town-group">
 <h3>Williamsburg</h3>
 <ul class="sitemap-grid">
@@ -1210,6 +1346,64 @@ footer a { color: #ffc107; }
 <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Brooklyn Appliance Repair is a local service website operated by Lumina Appliance Repair LLC, a trusted appliance repair company with experienced technicians serving Brooklyn and nearby areas.</p>
 </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const servicesMenu = document.getElementById('servicesMenu');
+  const servicesToggle = document.getElementById('servicesToggle');
+  const dropdownCloseBtn = document.getElementById('dropdownCloseBtn');
+  const serviceAreasToggle = document.getElementById('serviceAreasToggle');
+  const serviceAreasSubmenu = document.getElementById('serviceAreasSubmenu');
+
+  function closeDropdown() {
+    servicesMenu.classList.remove('active');
+    if (serviceAreasSubmenu) serviceAreasSubmenu.style.maxHeight = '0';
+  }
+
+  if (servicesToggle) {
+    servicesToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      servicesMenu.classList.toggle('active');
+    });
+  }
+
+  if (dropdownCloseBtn) {
+    dropdownCloseBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      closeDropdown();
+    });
+  }
+
+  if (serviceAreasToggle) {
+    serviceAreasToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (serviceAreasSubmenu.style.maxHeight && serviceAreasSubmenu.style.maxHeight !== '0px') {
+        serviceAreasSubmenu.style.maxHeight = '0';
+      } else {
+        serviceAreasSubmenu.style.maxHeight = serviceAreasSubmenu.scrollHeight + 'px';
+      }
+    });
+  }
+
+  document.addEventListener('click', closeDropdown);
+
+  // Call button functionality
+  const navCallBtn = document.getElementById('navCallNow');
+  if (navCallBtn) {
+    navCallBtn.addEventListener('click', function() {
+      if (this.dataset.revealed) return;
+      const digits = [8, 0, 0, 3, 6, 8, 1, 9, 5, 8];
+      const num = digits.join('');
+      const formatted = '+1 (' + num.slice(0,3) + ') ' + num.slice(3,6) + '-' + num.slice(6);
+      this.innerHTML = formatted;
+      this.dataset.revealed = 'true';
+      this.onclick = function() {
+        window.location.href = 'tel:+1' + num;
+      };
+    });
+  }
+});
+</script>
 
 </body>
 </html>
