@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Terms of Service</title>
+ <meta name="description" content="Terms of service for appliance repair.">
+ <meta name="robots" content="index, follow">
+ <link rel="canonical" href="https://brooklyn-appliance-repair-ny.com/terms-of-service/">
+ <link rel="icon" type="image/png" href="https://brooklyn-appliance-repair-ny.com/favicon.png" sizes="180x180">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+ :root {
+ --blue: #003087;
+ --red: #e41e26;
+ --gray: #f8f9fa;
+ }
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ body {
+ font-family: 'Inter', sans-serif;
+ color: #333;
+ background: #fff;
+ line-height: 1.6;
+ }
+ h1, h2, h3 {
+ font-family: 'Montserrat', sans-serif;
+ color: var(--blue);
+ }
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+ }
+ header {
+ background: var(--blue);
+ color: white;
+ padding: 20px 0;
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 1000;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ }
+ .logo-link {
+ font-size: 26px;
+ font-weight: 700;
+ color: white;
+ text-decoration: none;
+ display: inline-block;
+ }
+ .logo-link:hover {
+ color: #ddd;
+ }
+ .nav-wrapper {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ }
+ .nav-right {
+ display: flex;
+ gap: 20px;
+ align-items: center;
+ flex-wrap: wrap;
+ }
+ .nav-call-btn {
+ background: var(--red);
+ color: white;
+ padding: 12px 28px;
+ border-radius: 6px;
+ font-weight: 700;
+ text-decoration: none;
+ font-size: 17px;
+ transition: all .3s;
+ cursor: pointer;
+ }
+ .nav-call-btn:hover {
+ background: #c41b20;
+ transform: translateY(-2px);
+ }
+ .services-menu {
+ position: relative;
+ z-index: 1000;
+ }
+ .services-btn {
+ color: white;
+ font-weight: 600;
+ cursor: pointer;
+ padding: 12px 20px;
+ border-radius: 6px;
+ transition: all .3s;
+ background: rgba(255, 255, 255, 0.1);
+ white-space: nowrap;
+ box-sizing: border-box;
+ pointer-events: auto;
+ }
+ .services-btn:hover {
+ background: rgba(255, 255, 255, 0.2);
+ }
+ .services-dropdown {
+ display: none;
+ position: fixed;
+ top: 80px;
+ width: 420px;
+ min-width: 360px;
+ max-width: 95%;
+ min-height: 100px;
+ background: var(--blue);
+ border-radius: 12px;
+ box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+ padding: 32px 0;
+ z-index: 999;
+ max-height: 80vh;
+ overflow-y: auto;
+ box-sizing: border-box;
+ overflow-wrap: break-word;
+ white-space: nowrap;
+ overscroll-behavior: contain;
+ -webkit-overflow-scrolling: touch;
+ }
+ .services-menu.active .services-dropdown {
+ display: block !important;
+ }
+ #servicesMenu .services-dropdown {
+ right: 20px;
+ }
+ @media (max-width: 768px) {
+ .services-dropdown {
+ width: 95%;
+ max-width: 420px;
+ min-width: 320px;
+ right: auto;
+ left: 50%;
+ transform: translateX(-50%);
+ top: 80px;
+ }
+ .nav-wrapper {
+ flex-direction: column;
+ padding: 15px 0;
+ }
+ .logo-link {
+ margin-bottom: 10px;
+ font-size: 22px;
+ text-align: center;
+ }
+ .nav-right {
+ width: 100%;
+ justify-content: center;
+ gap: 15px;
+ }
+ .hero {
+ padding: 130px 15px 60px;
+ min-height: 35vh;
+ }
+ .hero h1 {
+ font-size: 38px;
+ }
+ }
+ @media (max-width: 480px) {
+ .services-dropdown {
+ width: 95%;
+ max-width: 380px;
+ min-width: 300px;
+ }
+ }
+ .services-dropdown li {
+ padding: 22px 36px;
+ margin: 14px 0;
+ color: #eee;
+ font-size: 18px;
+ line-height: 2.3;
+ transition: all .3s;
+ cursor: pointer;
+ box-sizing: border-box;
+ pointer-events: auto;
+ }
+ .services-dropdown li:hover {
+ background: var(--red);
+ color: white;
+ padding-left: 46px;
+ }
+ .services-dropdown a {
+ color: #eee;
+ text-decoration: none;
+ display: block;
+ width: 100%;
+ height: 100%;
+ pointer-events: auto;
+ }
+ .services-dropdown li:hover a {
+ color: white;
+ }
+ .submenu-toggle {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-weight: 700;
+ background: rgba(255, 255, 255, 0.15);
+ margin: 14px 20px;
+ border-radius: 8px;
+ padding: 22px 24px;
+ cursor: pointer;
+ box-sizing: border-box;
+ pointer-events: auto;
+ }
+ .submenu-toggle i {
+ transition: transform .3s;
+ font-size: 18px;
+ }
+ .submenu-toggle.active i {
+ transform: rotate(90deg);
+ }
+ .additional-submenu,
+ .service-areas-submenu {
+ max-height: 0;
+ overflow-y: auto;
+ transition: max-height 0.8s ease, opacity 0.3s ease, visibility 0.3s ease;
+ background: rgba(0, 0, 0, 0.2);
+ margin: 0 20px 14px;
+ border-radius: 8px;
+ box-sizing: border-box;
+ white-space: normal;
+ visibility: hidden;
+ opacity: 0;
+ -webkit-overflow-scrolling: touch;
+ }
+ .additional-submenu.active,
+ .service-areas-submenu.active {
+ max-height: none;
+ padding: 16px 0;
+ visibility: visible;
+ opacity: 1;
+ display: block !important;
+ }
+ .additional-submenu li,
+ .service-areas-submenu li {
+ padding: 20px 44px;
+ color: #eee;
+ font-size: 17px;
+ line-height: 2.1;
+ margin: 12px 0;
+ transition: all .3s;
+ box-sizing: border-box;
+ pointer-events: auto;
+ }
+ .service-areas-submenu li a {
+ color: #eee;
+ text-decoration: none;
+ display: block;
+ width: 100%;
+ height: 100%;
+ transition: all .3s;
+ cursor: pointer;
+ pointer-events: auto;
+ }
+ .additional-submenu li:hover,
+ .service-areas-submenu li:hover {
+ background: var(--red);
+ color: white;
+ padding-left: 54px;
+ }
+ .service-areas-submenu li:hover a {
+ color: white;
+ }
+ .nav-close-btn {
+ background: none;
+ color: #fff;
+ border: none;
+ font-size: 18px;
+ cursor: pointer;
+ padding: 10px;
+ transition: color .3s;
+ pointer-events: auto;
+ }
+ .nav-close-btn:hover {
+ color: var(--red);
+ }
+ .hero {
+ color: white;
+ text-align: center;
+ padding: 160px 20px 80px;
+ margin-top: 80px;
+ background: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url('/assets/images/appliances/hero-appliances.webp') center/cover no-repeat;
+ min-height: 40vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+ .hero h1 {
+ font-size: 52px;
+ margin-bottom: 16px;
+ text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
+ line-height: 1.2;
+ color: white;
+ }
+ .content-section {
+ padding: 80px 0;
+ }
+ .content-section h2 {
+ font-size: 32px;
+ margin-bottom: 20px;
+ margin-top: 40px;
+ }
+ .content-section h2:first-child {
+ margin-top: 0;
+ }
+ .content-section h3 {
+ font-size: 24px;
+ margin-bottom: 15px;
+ margin-top: 30px;
+ }
+ .content-section p {
+ margin-bottom: 20px;
+ font-size: 17px;
+ line-height: 1.8;
+ }
+ .content-section ul {
+ margin: 20px 0 20px 30px;
+ line-height: 1.8;
+ }
+ .content-section li {
+ margin-bottom: 10px;
+ font-size: 17px;
+ }
+ .content-section strong {
+ color: var(--blue);
+ }
+ .last-updated {
+ font-style: italic;
+ color: #666;
+ margin-bottom: 30px;
+ font-size: 16px;
+ }
+ footer {
+ background: #1a1a1a;
+ color: #b0b0b0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ 
+ .footer-main {
+ background: #1a1a1a;
+ padding: 60px 0 40px;
+ border-bottom: 1px solid #333;
+ }
+ 
+ .footer-grid {
+ display: grid;
+ grid-template-columns: 2fr 1fr 1fr 1.5fr;
+ gap: 50px;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+ }
+ 
+ .footer-column h3 {
+ color: #fff;
+ font-size: 18px;
+ font-weight: 700;
+ margin-bottom: 20px;
+ font-family: 'Montserrat', sans-serif;
+ }
+ 
+ .footer-column p {
+ margin: 8px 0;
+ line-height: 1.8;
+ font-size: 14px;
+ }
+ 
+ .footer-column ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ }
+ 
+ .footer-column ul li {
+ margin: 12px 0;
+ }
+ 
+ .footer-column ul li a {
+ color: #b0b0b0;
+ text-decoration: none;
+ font-size: 14px;
+ transition: color .3s;
+ display: inline-block;
+ }
+ 
+ .footer-column ul li a:hover {
+ color: var(--red);
+ padding-left: 5px;
+ }
+ 
+ .footer-brand {
+ display: flex;
+ flex-direction: column;
+ }
+ 
+ .footer-brand h2 {
+ color: #fff;
+ font-size: 22px;
+ font-weight: 700;
+ margin-bottom: 15px;
+ font-family: 'Montserrat', sans-serif;
+ }
+ 
+ .footer-hours {
+ background: rgba(0, 48, 135, 0.1);
+ padding: 15px;
+ border-radius: 8px;
+ margin-top: 20px;
+ border-left: 4px solid var(--blue);
+ }
+ 
+ .footer-hours p {
+ margin: 5px 0;
+ font-size: 14px;
+ }
+ 
+ .footer-hours strong {
+ color: #fff;
+ }
+ 
+ .footer-bottom {
+ background: #0d0d0d;
+ padding: 25px 0;
+ }
+ 
+ .footer-bottom-content {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+ }
+ 
+ .footer-bottom p {
+ margin: 8px 0;
+ font-size: 13px;
+ color: #888;
+ text-align: center;
+ }
+ 
+ .footer-bottom-links {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: 0 0 20px 0;
+ flex-wrap: wrap;
+ gap: 15px;
+ padding: 20px 0;
+ border-bottom: 1px solid #222;
+ }
+ 
+ .footer-bottom-links a {
+ color: #b0b0b0;
+ text-decoration: none;
+ font-size: 14px;
+ transition: color .3s;
+ white-space: nowrap;
+ }
+ 
+ .footer-bottom-links a:hover {
+ color: var(--blue);
+ }
+ 
+ @media (max-width: 992px) {
+ .footer-grid {
+ grid-template-columns: 1fr 1fr;
+ gap: 40px;
+ }
+ 
+ .footer-bottom-links {
+ justify-content: center;
+ gap: 20px 30px;
+ }
+ }
+ 
+ @media (max-width: 768px) {
+ .footer-grid {
+ grid-template-columns: 1fr;
+ gap: 35px;
+ }
+ 
+ .footer-main {
+ padding: 40px 0 30px;
+ }
+ 
+ .footer-column {
+ text-align: center;
+ }
+ 
+ .footer-brand {
+ align-items: center;
+ }
+ 
+ .footer-bottom-links {
+ gap: 15px 25px;
+ }
+ }
+ 
+ @media (max-width: 480px) {
+ .footer-bottom-links {
+ flex-direction: column;
+ gap: 12px;
+ padding: 15px 0;
+ }
+ 
+ .footer-bottom-links a {
+ font-size: 13px;
+ }
+ }
+ </style>
+</head>
+<body>
+ <header>
+ <div class="container nav-wrapper">
+ <a href="https://brooklyn-appliance-repair-ny.com/" class="logo-link" aria-label="Return to Brooklyn Appliance Repair Homepage">Brooklyn Appliance Repair</a>
+ <div class="nav-right">
+ <div class="services-menu" id="servicesMenu">
+ <div class="services-btn" id="servicesToggle">Services</div>
+ <ul class="services-dropdown" id="servicesDropdown">
+ <li style="text-align:right;">
+ <button id="navCloseBtn" class="nav-close-btn">✕ Close</button>
+ </li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/washer-repair/" aria-label="Washer Repair">Washer Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/dryer-repair/" aria-label="Dryer Repair">Dryer Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/refrigerator-repair/" aria-label="Refrigerator Repair">Refrigerator Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/dishwasher-repair/" aria-label="Dishwasher Repair">Dishwasher Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/oven-repair/" aria-label="Oven & Range Repair">Oven & Range Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/cooktop-repair/" aria-label="Cooktop Repair">Cooktop Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/microwave-repair/" aria-label="Microwave Repair">Microwave Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/wine-cooler-repair/" aria-label="Wine Cooler Repair">Wine Cooler Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/vent-hood-repair/" aria-label="Vent Hood Repair">Vent Hood Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/installation-maintenance/" aria-label="Installation & Maintenance">Installation & Maintenance</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/" aria-label="All Appliances Repair">All Appliances</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/reviews/" aria-label="Customer Reviews">★ Reviews</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/brands/" aria-label="Brands We Service">Brands We Service</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/about/" aria-label="About Us">About Us</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/contact/" aria-label="Contact Us">Contact Us</a></li>
+ <li class="submenu-toggle" id="additionalToggle">Additional Services <i class="fas fa-chevron-right"></i></li>
+ <div class="additional-submenu" id="additionalSubmenu">
+ <li>Installation, Repair & Maintenance</li>
+ <li>Refrigerator Compressor & Refrigerant Service</li>
+ <li>Appliance Performance Optimization</li>
+ <li>Appliance Relocation & Setup Assistance</li>
+ <li>Smart Appliance Connectivity Support</li>
+ <li>Professional Deep Cleaning Services</li>
+ <li>Energy Efficiency Upgrades & Optimization</li>
+ <li>Noise & Vibration Reduction Services</li>
+ <li>Commercial & Multi-Unit Appliance Services</li>
+ <li>Recalls & Safety Compliance</li>
+ <li>EPA Section 608 Certification</li>
+ <li>Appliance Warranty & Extended Service Plans</li>
+ </div>
+ <li class="submenu-toggle" id="serviceAreasToggle">Service Areas <i class="fas fa-chevron-right"></i></li>
+ <div class="service-areas-submenu" id="serviceAreasSubmenu">
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/williamsburg/">Williamsburg</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/greenpoint/">Greenpoint</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/bushwick/">Bushwick</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/bedford-stuyvesant/">Bedford-Stuyvesant</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/crown-heights/">Crown Heights</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/fort-greene/">Fort Greene</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/clinton-hill/">Clinton Hill</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/downtown-brooklyn/">Downtown Brooklyn</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/brooklyn-heights/">Brooklyn Heights</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/dumbo/">DUMBO</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/red-hook/">Red Hook</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/carroll-gardens/">Carroll Gardens</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/park-slope/">Park Slope</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/gowanus/">Gowanus</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/sunset-park/">Sunset Park</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/bay-ridge/">Bay Ridge</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/bensonhurst/">Bensonhurst</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/dyker-heights/">Dyker Heights</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/brighton-beach/">Brighton Beach</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/coney-island/">Coney Island</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/flatbush/">Flatbush</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/east-new-york/">East New York</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/sheepshead-bay/">Sheepshead Bay</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/marine-park/">Marine Park</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/canarsie/">Canarsie</a></li>
+</div>
+ </ul>
+ </div>
+ <div class="nav-call-btn" id="navCallNow">📞 Call Now</div>
+ </div>
+ </div>
+ </header>
+ <section class="hero">
+ <div class="container">
+ <h1>Terms of Service</h1>
+ </div>
+ </section>
+ <section class="content-section">
+ <div class="container">
+ <p class="last-updated">Last Updated: December 2, 2025</p>
+ <p>Welcome to Brooklyn Appliance Repair ("we," "us," or "our"). These Terms of Service ("Terms") govern your use of our website, services, and any related offerings provided by Brooklyn Appliance Repair. By accessing our website or engaging our services, you agree to be bound by these Terms. If you do not agree, please do not use our website or services.</p>
+ <h2>1. Acceptance of Terms</h2>
+ <p>By using our website, scheduling a service, or contacting us, you acknowledge that you have read, understood, and agree to these Terms and our <a href="https://brooklyn-appliance-repair-ny.com/privacy-policy/">Privacy Policy</a>. These Terms apply to all users, including visitors, customers, and others who access our services.</p>
+ <h2>2. Description of Services</h2>
+ <p>We provide professional repair, maintenance, and installation services for household appliances, including but not limited to:</p>
+ <ul>
+ <li>Washers</li>
+ <li>Dryers</li>
+ <li>Refrigerators</li>
+ <li>Dishwashers</li>
+ <li>Ovens and Ranges</li>
+ <li>Cooktops</li>
+ <li>Microwaves</li>
+ <li>Wine Coolers</li>
+ <li>Vent Hoods</li>
+ </ul>
+ <p>Services are provided by factory-trained technicians in Brooklyn, NY, and surrounding areas as listed on our website.</p>
+ <h2>3. Service Requests and Scheduling</h2>
+ <h3>Booking a Service</h3>
+ <p>You may request services through our website, by phone, or via email. When scheduling, you agree to provide accurate information, including:</p>
+ <ul>
+ <li>Your name, address, and contact details</li>
+ <li>Details of the appliance and issue</li>
+ <li>Preferred service date and time</li>
+ </ul>
+ <h3>Availability</h3>
+ <p>Services are subject to technician availability. We aim to provide same-day service when possible but do not guarantee specific times or dates. We will confirm your appointment and notify you of any changes.</p>
+ <h2>4. Payment and Pricing</h2>
+ <p><strong>Pricing:</strong> Service costs vary based on the appliance, issue, and required parts. We provide estimates before starting work, but final costs may differ due to unforeseen complexities. All prices exclude taxes unless otherwise stated.</p>
+ <p><strong>Payment Terms:</strong> Payment is due upon completion of service unless otherwise agreed. We accept major credit cards, processed securely through third-party payment providers. Invoices unpaid after 30 days may incur a late fee of 1.5% per month.</p>
+ <p><strong>Diagnostic Fees:</strong> A diagnostic fee may apply to assess your appliance, which will be credited toward repair costs if you proceed with the service.</p>
+ <h2>5. Warranties and Guarantees</h2>
+ <h3>Service Warranty</h3>
+ <p>We offer a limited warranty on repairs, typically 90 days for labor and up to one year for parts, subject to the following:</p>
+ <ul>
+ <li>The warranty covers only the specific issue repaired.</li>
+ <li>It does not cover new issues, misuse, or damage caused by the customer.</li>
+ <li>You must report warranty issues within the warranty period.</li>
+ </ul>
+ <h3>Manufacturer Warranties</h3>
+ <p>If your appliance is under a manufacturer's warranty, we will coordinate with the manufacturer where applicable. You are responsible for providing warranty documentation.</p>
+ <p><strong>Disclaimer:</strong> Except as expressly stated, we provide no other warranties, express or implied, including warranties of merchantability or fitness for a particular purpose.</p>
+ <h2>6. Customer Responsibilities</h2>
+ <p>You agree to:</p>
+ <ul>
+ <li>Provide safe and reasonable access to the appliance and work area.</li>
+ <li>Ensure the appliance is powered and accessible before the technician's arrival.</li>
+ <li>Inform us of any known hazards (e.g., electrical issues, water leaks).</li>
+ <li>Secure pets and clear the work area of obstacles.</li>
+ <li>Pay all fees and charges promptly upon service completion.</li>
+ </ul>
+ <p>Failure to meet these responsibilities may result in service delays, additional fees, or cancellation.</p>
+ <h2>7. Limitation of Liability</h2>
+ <p>To the fullest extent permitted by law, Brooklyn Appliance Repair shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+ <ul>
+ <li>Loss of use, data, or profits</li>
+ <li>Property damage beyond the appliance repaired</li>
+ <li>Injuries caused by appliance misuse or failure to follow instructions</li>
+ </ul>
+ <p>Our total liability for any claim arising from our services shall not exceed the amount paid for the specific service. We are not responsible for pre-existing conditions or damages discovered during service.</p>
+ <h2>8. Cancellation and Refunds</h2>
+ <h3>Cancellation</h3>
+ <p>You may cancel a scheduled service at least 24 hours before the appointment without charge. Cancellations within 24 hours or failure to provide access may incur a cancellation fee equal to the diagnostic fee.</p>
+ <h3>Refunds</h3>
+ <p>Refunds are issued at our discretion for services not performed or under warranty claims. No refunds are provided for completed services unless covered by our warranty. Parts ordered or installed are non-refundable unless defective.</p>
+ <h2>9. Intellectual Property</h2>
+ <p>All content on our website, including text, images, logos, and trademarks, is owned by Brooklyn Appliance Repair or our licensors and protected by copyright and intellectual property laws. You may not reproduce, distribute, or modify any content without our prior written consent.</p>
+ <h2>10. Termination of Services</h2>
+ <p>We reserve the right to refuse or terminate service at our discretion, including but not limited to:</p>
+ <ul>
+ <li>Non-payment of fees</li>
+ <li>Abusive or threatening behavior toward our staff</li>
+ <li>Unsafe working conditions</li>
+ <li>Fraudulent or misleading information</li>
+ </ul>
+ <p>Upon termination, you remain liable for any outstanding fees or charges.</p>
+ <h2>11. Governing Law</h2>
+ <p>These Terms shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law principles. Any disputes arising from these Terms or our services shall be resolved in the state or federal courts located in Brooklyn, NY.</p>
+ <h2>12. Changes to These Terms</h2>
+ <p>We may update these Terms from time to time to reflect changes in our practices, services, or legal requirements. We will notify you of material changes by posting the updated Terms on our website with a new "Last Updated" date. Your continued use of our services after such changes constitutes acceptance of the revised Terms.</p>
+ <h2>13. Contact Us</h2>
+ <p>If you have any questions, concerns, or disputes regarding these Terms or our services, please contact us:</p>
+ <p style="margin-top: 30px;">
+ <strong>Brooklyn Appliance Repair</strong><br>
+ 123 Flatbush Avenue<br>
+ Brooklyn, NY 10601<br>
+ Email: info@brooklyn-appliance-repair-ny.com<br>
+ Phone: Click "Call Now" button above
+ </p>
+ </div>
+ </section>
+ <footer>
+ <div class="footer-main">
+ <div class="footer-grid">
+ <div class="footer-column footer-brand">
+ <a href="https://brooklyn-appliance-repair-ny.com/" style="display: inline-block; margin-bottom: 15px;" aria-label="Brooklyn Appliance Repair Homepage"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 55" style="height: 45px; width: auto;"><defs><linearGradient id="footerFridgeGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#e8ecf1"/><stop offset="100%" style="stop-color:#c5cdd8"/></linearGradient><linearGradient id="footerBadgeGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#3b6cb5"/><stop offset="100%" style="stop-color:#1e3a6e"/></linearGradient></defs><circle cx="27" cy="27.5" r="25" fill="url(#footerBadgeGrad)" stroke="#5a8ad4" stroke-width="2"/><rect x="14" y="8" width="22" height="38" rx="2" fill="url(#footerFridgeGrad)" stroke="#8896a7" stroke-width="1"/><rect x="15" y="9" width="20" height="12" rx="1" fill="#f5f7fa" stroke="#a0aec0" stroke-width="0.5"/><rect x="32" y="12" width="2" height="6" rx="0.5" fill="#6b7c8f"/><rect x="15" y="23" width="20" height="22" rx="1" fill="#f5f7fa" stroke="#a0aec0" stroke-width="0.5"/><rect x="32" y="28" width="2" height="12" rx="0.5" fill="#6b7c8f"/><g transform="translate(6, 20) rotate(-30)"><rect x="0" y="8" width="4" height="18" rx="1" fill="#f97316"/><path d="M-2 4 L2 0 L6 4 L6 10 L4 10 L4 7 L2 5 L0 7 L0 10 L-2 10 Z" fill="#71717a"/></g><text x="58" y="24" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#ffffff" letter-spacing="0.5">BROOKLYN</text><text x="58" y="43" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#f97316" letter-spacing="1.5">APPLIANCE REPAIR</text></svg></a>
+ <p><strong>Brooklyn, New York</strong></p>
+ <p>123 Flatbush Avenue<br>Brooklyn, NY 10601</p>
+ <p style="margin-top: 15px;">Certified appliance repair serving all of Brooklyn. Same-day service available for washers, dryers, dishwashers, ovens, microwaves, cooktops, and refrigerators.</p>
+ <div class="footer-hours">
+ <p><strong>Business Hours</strong></p>
+ <p>Monday - Sunday<br>7:00 AM – 9:00 PM</p>
+ </div>
+ </div>
+ 
+ <div class="footer-column">
+ <h3>Our Services</h3>
+ <ul>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/washer-repair/">Washer Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/dryer-repair/">Dryer Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/refrigerator-repair/">Refrigerator Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/dishwasher-repair/">Dishwasher Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/oven-repair/">Oven Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/microwave-repair/">Microwave Repair</a></li>
+ </ul>
+ </div>
+ 
+ <div class="footer-column">
+ <h3>More Services</h3>
+ <ul>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/cooktop-repair/">Cooktop Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/wine-cooler-repair/">Wine Cooler Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/vent-hood-repair/">Vent Hood Repair</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/appliances/installation-maintenance/">Installation & Maintenance</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/">All Appliances</a></li>
+ </ul>
+ </div>
+ 
+ <div class="footer-column">
+ <h3>Quick Links</h3>
+ <ul>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/">Home</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/reviews/">Reviews</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/brands/">Brands</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/brooklyn/">Service Areas</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/#contact">Schedule Service</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/epa-certified/">EPA Certified</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/sitemap/">Sitemap</a></li>
+<li><a href="https://brooklyn-appliance-repair-ny.com/privacy-policy/">Privacy Policy</a></li>
+ <li><a href="https://brooklyn-appliance-repair-ny.com/terms-of-service/">Terms of Service</a></li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="footer-bottom">
+ <div class="footer-bottom-content">
+ <p>© 2025 Brooklyn Appliance Repair. All Rights Reserved.</p>
+ <p>Licensed & Insured • Professional Technicians • Same-Day Service Available</p>
+<p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">Brooklyn Appliance Repair is a local service website operated by Lumina Appliance Repair LLC, a trusted appliance repair company with experienced technicians serving Brooklyn and nearby areas.</p>
+ </div>
+ </div>
+ </footer>
+ <script>
+ // Towns list with URLs
+ const brooklynTowns = [
+ {name: "Williamsburg", zip: "07401", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/williamsburg/"},
+ {name: "Greenpoint", zip: "07620", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/greenpoint/"},
+ {name: "Dyker Heights", zip: "07621", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/dyker-heights/"},
+ {name: "Bushwick", zip: "07603", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/bushwick/"},
+ {name: "Bedford-Stuyvesant", zip: "07072", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/bedford-stuyvesant/"},
+ {name: "Red Hook", zip: "07010", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/red-hook/"},
+ {name: "Crown Heights", zip: "07624", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/crown-heights/"},
+ {name: "Fort Greene", zip: "07626", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/fort-greene/"},
+ {name: "Clinton Hill", zip: "07627", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/clinton-hill/"},
+ {name: "Downtown Brooklyn", zip: "07628", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/downtown-brooklyn/"},
+ {name: "Brooklyn Heights", zip: "07073", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/brooklyn-heights/"},
+ {name: "Bushwick", zip: "07020", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/bushwick/"},
+ {name: "DUMBO", zip: "07407", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/dumbo/"},
+ {name: "Red Hook", zip: "07630", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/red-hook/"},
+ {name: "Bensonhurst", zip: "07631", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/bensonhurst/"},
+ {name: "Carroll Gardens", zip: "07632", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/carroll-gardens/"},
+ {name: "Greenpoint", zip: "07410", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/greenpoint/"},
+ {name: "Fort Greene", zip: "07022", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/fort-greene/"},
+ {name: "Gowanus", zip: "07024", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/gowanus/"},
+ {name: "Park Slope", zip: "07417", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/park-slope/"},
+ {name: "Bedford-Stuyvesant", zip: "07026", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/bedford-stuyvesant/"},
+ {name: "Williamsburg", zip: "07452", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/williamsburg/"},
+ {name: "Brooklyn", zip: "07601", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/flatbush/"},
+ {name: "Gowanus", zip: "07604", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/gowanus/"},
+ {name: "Sunset Park", zip: "07641", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/sunset-park/"},
+ {name: "Bay Ridge", zip: "07642", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/bay-ridge/"},
+ {name: "Bensonhurst", zip: "07423", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/bensonhurst/"},
+ {name: "Crown Heights", zip: "07605", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/crown-heights/"},
+ {name: "Dyker Heights", zip: "07643", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/dyker-heights/"},
+ {name: "Downtown Brooklyn", zip: "07644", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/downtown-brooklyn/"},
+ {name: "DUMBO", zip: "07071", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/dumbo/"},
+ {name: "Brooklyn", zip: "10601", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/clinton-hill/"},
+ {name: "Bay Ridge", zip: "07607", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/bay-ridge/"},
+ {name: "Fort Greene", zip: "07432", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/fort-greene/"},
+ {name: "Coney Island", zip: "07074", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/coney-island/"},
+ {name: "Brooklyn Heights", zip: "07646", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/brooklyn-heights/"},
+ {name: "Coney Island", zip: "07031", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/coney-island/"},
+ {name: "Brighton Beach", zip: "07647", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/brighton-beach/"},
+ {name: "Brooklyn", zip: "07648", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/flatbush/"},
+ {name: "Sunset Park", zip: "07436", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/sunset-park/"},
+ {name: "East New York", zip: "07649", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/east-new-york/"},
+ {name: "Williamsburg", zip: "07650", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/williamsburg/"},
+ {name: "East New York", zip: "07652", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/east-new-york/"},
+ {name: "Greenpoint", zip: "07656", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/greenpoint/"},
+ {name: "Bushwick", zip: "07446", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/bushwick/"},
+ {name: "Carroll Gardens", zip: "07450", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/carroll-gardens/"},
+ {name: "Bedford-Stuyvesant", zip: "07661", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/bedford-stuyvesant/"},
+ {name: "Crown Heights", zip: "07675", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/crown-heights/"},
+ {name: "Fort Greene", zip: "07662", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/fort-greene/"},
+ {name: "Clinton Hill", zip: "07647", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/clinton-hill/"},
+ {name: "Downtown Brooklyn", zip: "07070", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/downtown-brooklyn/"},
+ {name: "Brooklyn Heights", zip: "07663", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/brooklyn-heights/"},
+ {name: "DUMBO", zip: "07458", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/dumbo/"},
+ {name: "Red Hook", zip: "07606", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/red-hook/"},
+ {name: "Park Slope", zip: "07666", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/park-slope/"},
+ {name: "Carroll Gardens", zip: "07670", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/carroll-gardens/"},
+ {name: "Park Slope", zip: "07608", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/park-slope/"},
+ {name: "Gowanus", zip: "07458", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/gowanus/"},
+ {name: "Sunset Park", zip: "07463", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/sunset-park/"},
+ {name: "Bay Ridge", zip: "07057", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/bay-ridge/"},
+ {name: "Bensonhurst", zip: "07676", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/bensonhurst/"},
+ {name: "Dyker Heights", zip: "07675", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/dyker-heights/"},
+ {name: "Coney Island", zip: "07677", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/coney-island/"},
+ {name: "Brighton Beach", zip: "07075", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/brighton-beach/"},
+ {name: "Brooklyn", zip: "07481", url: "https://brooklyn-appliance-repair-ny.com/brooklyn/flatbush/"}
+ ].sort((a, b) => a.name.localeCompare(b.name));
+
+ document.addEventListener('DOMContentLoaded', () => {
+ console.log('DOM loaded at', new Date().toLocaleString());
+
+ // Call Now Button
+ const navCallNow = document.getElementById('navCallNow');
+ if (navCallNow) {
+ navCallNow.addEventListener('click', function() {
+ if (this.dataset.revealed) return;
+ const digits = [8, 0, 0, 3, 6, 8, 1, 9, 5, 8];
+ const num = digits.join('');
+ const formatted = `+1 (${num.slice(0,3)}) ${num.slice(3,6)}-${num.slice(6)}`;
+ this.innerHTML = formatted;
+ this.dataset.revealed = 'true';
+ this.onclick = () => {
+ window.location.href = `tel:+1${num}`;
+ };
+ });
+ }
+
+ // Services Dropdown
+ const servicesMenu = document.getElementById('servicesMenu');
+ const servicesToggle = document.getElementById('servicesToggle');
+ const servicesDropdown = document.getElementById('servicesDropdown');
+ const additionalToggle = document.getElementById('additionalToggle');
+ const additionalSubmenu = document.getElementById('additionalSubmenu');
+ const serviceAreasToggle = document.getElementById('serviceAreasToggle');
+ const serviceAreasSubmenu = document.getElementById('serviceAreasSubmenu');
+ const navCloseBtn = document.getElementById('navCloseBtn');
+ if (!servicesMenu || !servicesToggle || !servicesDropdown || !additionalToggle || !additionalSubmenu || !serviceAreasToggle || !serviceAreasSubmenu || !navCloseBtn) {
+ console.error('Services dropdown elements missing:', {
+ servicesMenu: !!servicesMenu, servicesToggle: !!servicesToggle, servicesDropdown: !!servicesDropdown,
+ additionalToggle: !!additionalToggle, additionalSubmenu: !!additionalSubmenu,
+ serviceAreasToggle: !!serviceAreasToggle, serviceAreasSubmenu: !!serviceAreasSubmenu, navCloseBtn: !!navCloseBtn
+ });
+ return;
+ }
+ console.log('Services dropdown elements found');
+
+ function populateServiceAreasSubmenu() {
+ console.log('Populating service areas submenu...');
+ console.log('Towns array length:', brooklynTowns.length);
+ serviceAreasSubmenu.innerHTML = brooklynTowns.map(t => {
+ console.log(`Generating submenu link for ${t.name}: ${t.url}`);
+ return `<li><a href="${t.url}" class="service-area-link" aria-label="Appliance Repair in ${t.name}">${t.name}</a></li>`;
+ }).join('');
+ console.log('Service areas submenu populated with towns:', brooklynTowns.map(t => ({name: t.name, url: t.url})));
+ console.log('Service areas submenu height:', serviceAreasSubmenu.scrollHeight + 'px');
+ console.log('Service areas submenu scrollable:', serviceAreasSubmenu.scrollHeight > serviceAreasSubmenu.clientHeight);
+ }
+ populateServiceAreasSubmenu();
+
+ servicesToggle.addEventListener('click', (e) => {
+ e.stopPropagation();
+ console.log('Services toggle clicked (mobile:', window.innerWidth <= 768, ')');
+ servicesMenu.classList.toggle('active');
+ });
+
+ additionalToggle.addEventListener('click', (e) => {
+ e.stopPropagation();
+ console.log('Additional services toggle clicked (mobile:', window.innerWidth <= 768, ')');
+ additionalToggle.classList.toggle('active');
+ additionalSubmenu.classList.toggle('active');
+ console.log('Additional submenu visibility:', additionalSubmenu.classList.contains('active') ? 'Visible' : 'Hidden');
+ });
+
+ serviceAreasToggle.addEventListener('click', (e) => {
+ e.stopPropagation();
+ console.log('Service areas toggle clicked (mobile:', window.innerWidth <= 768, ')');
+ serviceAreasToggle.classList.toggle('active');
+ serviceAreasSubmenu.classList.toggle('active');
+ console.log('Service areas submenu visibility:', serviceAreasSubmenu.classList.contains('active') ? 'Visible' : 'Hidden');
+ });
+
+ navCloseBtn.addEventListener('click', () => {
+ console.log('Mobile nav close button clicked (mobile:', window.innerWidth <= 768, ')');
+ servicesMenu.classList.remove('active');
+ console.log('Services dropdown closed');
+ });
+
+ servicesDropdown.addEventListener('click', (e) => {
+ if (e.target.tagName === 'A') {
+ console.log(`Dropdown link clicked: ${e.target.href} (mobile: ${window.innerWidth <= 768})`);
+ } else if (!e.target.classList.contains('nav-close-btn') && !e.target.classList.contains('submenu-toggle')) {
+ e.stopPropagation();
+ console.log('Services dropdown clicked, preventing close (mobile:', window.innerWidth <= 768, ')');
+ }
+ });
+
+ // Touch events for mobile
+ servicesDropdown.addEventListener('touchstart', (e) => {
+ console.log('Touch start on dropdown (mobile:', window.innerWidth <= 768, ')');
+ e.stopPropagation();
+ }, { passive: true });
+ servicesDropdown.addEventListener('touchmove', (e) => {
+ console.log('Touch move on dropdown (mobile:', window.innerWidth <= 768, ')');
+ }, { passive: true });
+ servicesDropdown.addEventListener('touchend', (e) => {
+ console.log('Touch end on dropdown (mobile:', window.innerWidth <= 768, ')');
+ e.stopPropagation();
+ }, { passive: true });
+
+ // Close dropdowns on outside click/tap
+ document.addEventListener('click', () => {
+ console.log('Outside click detected (mobile:', window.innerWidth <= 768, ')');
+ servicesMenu.classList.remove('active');
+ additionalToggle.classList.remove('active');
+ additionalSubmenu.classList.remove('active');
+ serviceAreasToggle.classList.remove('active');
+ serviceAreasSubmenu.classList.remove('active');
+ });
+ });
+ </script>
+</body>
+</html>
