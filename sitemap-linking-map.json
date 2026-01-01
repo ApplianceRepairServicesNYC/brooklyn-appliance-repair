@@ -1,0 +1,255 @@
+{
+  "source": "sitemap.xml",
+  "total_urls": 914,
+  "towns": {
+    "tarrytown": "https://westchestercountyrepair.com/ny/tarrytown/",
+    "hastings-on-hudson": "https://westchestercountyrepair.com/ny/hastings-on-hudson/",
+    "white-plains": "https://westchestercountyrepair.com/ny/white-plains/",
+    "ardsley": "https://westchestercountyrepair.com/ny/ardsley/",
+    "bronxville": "https://westchestercountyrepair.com/ny/bronxville/",
+    "elmsford": "https://westchestercountyrepair.com/ny/elmsford/",
+    "valhalla": "https://westchestercountyrepair.com/ny/valhalla/",
+    "scarsdale": "https://westchestercountyrepair.com/ny/scarsdale/",
+    "harrison": "https://westchestercountyrepair.com/ny/harrison/",
+    "hartsdale": "https://westchestercountyrepair.com/ny/hartsdale/",
+    "mamaroneck": "https://westchestercountyrepair.com/ny/mamaroneck/",
+    "yonkers": "https://westchestercountyrepair.com/ny/yonkers/",
+    "village-of-pelham": "https://westchestercountyrepair.com/ny/village-of-pelham/",
+    "pelham-manor": "https://westchestercountyrepair.com/ny/pelham-manor/",
+    "new-rochelle": "https://westchestercountyrepair.com/ny/new-rochelle/",
+    "larchmont": "https://westchestercountyrepair.com/ny/larchmont/",
+    "mount-vernon": "https://westchestercountyrepair.com/ny/mount-vernon/",
+    "dobbs-ferry": "https://westchestercountyrepair.com/ny/dobbs-ferry/",
+    "eastchester": "https://westchestercountyrepair.com/ny/eastchester/",
+    "irvington": "https://westchestercountyrepair.com/ny/irvington/",
+    "fairview": "https://westchestercountyrepair.com/ny/fairview/",
+    "rye": "https://westchestercountyrepair.com/ny/rye/"
+  },
+  "brands": {
+    "sub-zero": "https://westchestercountyrepair.com/brands/sub-zero/",
+    "smeg": "https://westchestercountyrepair.com/brands/smeg/",
+    "dacor": "https://westchestercountyrepair.com/brands/dacor/",
+    "kitchenaid": "https://westchestercountyrepair.com/brands/kitchenaid/",
+    "vent-a-hood": "https://westchestercountyrepair.com/brands/vent-a-hood/",
+    "moffat": "https://westchestercountyrepair.com/brands/moffat/",
+    "danby": "https://westchestercountyrepair.com/brands/danby/",
+    "fulgor-milano": "https://westchestercountyrepair.com/brands/fulgor-milano/",
+    "fisher-paykel": "https://westchestercountyrepair.com/brands/fisher-paykel/",
+    "magic-chef": "https://westchestercountyrepair.com/brands/magic-chef/",
+    "ariston": "https://westchestercountyrepair.com/brands/ariston/",
+    "liebherr": "https://westchestercountyrepair.com/brands/liebherr/",
+    "sharp": "https://westchestercountyrepair.com/brands/sharp/",
+    "beaumark": "https://westchestercountyrepair.com/brands/beaumark/",
+    "hobart": "https://westchestercountyrepair.com/brands/hobart/",
+    "whirlpool": "https://westchestercountyrepair.com/brands/whirlpool/",
+    "gaggenau": "https://westchestercountyrepair.com/brands/gaggenau/",
+    "hotpoint": "https://westchestercountyrepair.com/brands/hotpoint/",
+    "frigidaire": "https://westchestercountyrepair.com/brands/frigidaire/",
+    "bertazzoni-appliances": "https://westchestercountyrepair.com/brands/bertazzoni-appliances/",
+    "broan": "https://westchestercountyrepair.com/brands/broan/",
+    "venmar": "https://westchestercountyrepair.com/brands/venmar/",
+    "avantgarde": "https://westchestercountyrepair.com/brands/avantgarde/",
+    "maytag": "https://westchestercountyrepair.com/brands/maytag/",
+    "viking": "https://westchestercountyrepair.com/brands/viking/",
+    "westinghouse": "https://westchestercountyrepair.com/brands/westinghouse/",
+    "thermador": "https://westchestercountyrepair.com/brands/thermador/",
+    "asko": "https://westchestercountyrepair.com/brands/asko/",
+    "inglis": "https://westchestercountyrepair.com/brands/inglis/",
+    "bosch": "https://westchestercountyrepair.com/brands/bosch/",
+    "porter-charles": "https://westchestercountyrepair.com/brands/porter-charles/",
+    "miele": "https://westchestercountyrepair.com/brands/miele/",
+    "amana": "https://westchestercountyrepair.com/brands/amana/",
+    "brada": "https://westchestercountyrepair.com/brands/brada/",
+    "bluestar": "https://westchestercountyrepair.com/brands/bluestar/",
+    "haier": "https://westchestercountyrepair.com/brands/haier/",
+    "cafe": "https://westchestercountyrepair.com/brands/cafe/",
+    "cove": "https://westchestercountyrepair.com/brands/cove/",
+    "blomberg": "https://westchestercountyrepair.com/brands/blomberg/",
+    "premier": "https://westchestercountyrepair.com/brands/premier/",
+    "panasonic": "https://westchestercountyrepair.com/brands/panasonic/",
+    "wolf": "https://westchestercountyrepair.com/brands/wolf/",
+    "ge": "https://westchestercountyrepair.com/brands/ge/",
+    "roper": "https://westchestercountyrepair.com/brands/roper/",
+    "aeg": "https://westchestercountyrepair.com/brands/aeg/",
+    "admiral": "https://westchestercountyrepair.com/brands/admiral/",
+    "thor-kitchen": "https://westchestercountyrepair.com/brands/thor-kitchen/",
+    "lg": "https://westchestercountyrepair.com/brands/lg/",
+    "bertazzoni": "https://westchestercountyrepair.com/brands/bertazzoni/",
+    "tappan": "https://westchestercountyrepair.com/brands/tappan/",
+    "electrolux": "https://westchestercountyrepair.com/brands/electrolux/",
+    "marvel": "https://westchestercountyrepair.com/brands/marvel/",
+    "kenmore": "https://westchestercountyrepair.com/brands/kenmore/",
+    "sirius": "https://westchestercountyrepair.com/brands/sirius/",
+    "samsung": "https://westchestercountyrepair.com/brands/samsung/",
+    "ikea": "https://westchestercountyrepair.com/brands/ikea/",
+    "jenn-air": "https://westchestercountyrepair.com/brands/jenn-air/"
+  },
+  "appliances": {
+    "oven-repair": "https://westchestercountyrepair.com/appliances/oven-repair/",
+    "dishwasher-repair": "https://westchestercountyrepair.com/appliances/dishwasher-repair/",
+    "vent-hood-repair": "https://westchestercountyrepair.com/appliances/vent-hood-repair/",
+    "installation-maintenance": "https://westchestercountyrepair.com/appliances/installation-maintenance/",
+    "wine-cooler-repair": "https://westchestercountyrepair.com/appliances/wine-cooler-repair/",
+    "refrigerator-repair": "https://westchestercountyrepair.com/appliances/refrigerator-repair/",
+    "dryer-repair": "https://westchestercountyrepair.com/appliances/dryer-repair/",
+    "cooktop-repair": "https://westchestercountyrepair.com/appliances/cooktop-repair/",
+    "washer-repair": "https://westchestercountyrepair.com/appliances/washer-repair/",
+    "microwave-repair": "https://westchestercountyrepair.com/appliances/microwave-repair/"
+  },
+  "nearby_clusters": {
+    "ardsley": [
+      "dobbs-ferry",
+      "hartsdale",
+      "elmsford",
+      "irvington",
+      "hastings-on-hudson"
+    ],
+    "bronxville": [
+      "eastchester",
+      "mount-vernon",
+      "pelham-manor",
+      "village-of-pelham",
+      "scarsdale"
+    ],
+    "dobbs-ferry": [
+      "ardsley",
+      "hastings-on-hudson",
+      "irvington",
+      "tarrytown",
+      "elmsford"
+    ],
+    "eastchester": [
+      "bronxville",
+      "scarsdale",
+      "mount-vernon",
+      "pelham-manor",
+      "hartsdale"
+    ],
+    "elmsford": [
+      "white-plains",
+      "hartsdale",
+      "valhalla",
+      "tarrytown",
+      "ardsley"
+    ],
+    "fairview": [
+      "yonkers",
+      "hastings-on-hudson",
+      "dobbs-ferry",
+      "irvington",
+      "ardsley"
+    ],
+    "harrison": [
+      "rye",
+      "mamaroneck",
+      "larchmont",
+      "scarsdale",
+      "white-plains"
+    ],
+    "hartsdale": [
+      "white-plains",
+      "scarsdale",
+      "ardsley",
+      "elmsford",
+      "eastchester"
+    ],
+    "hastings-on-hudson": [
+      "dobbs-ferry",
+      "irvington",
+      "ardsley",
+      "yonkers",
+      "fairview"
+    ],
+    "irvington": [
+      "dobbs-ferry",
+      "tarrytown",
+      "hastings-on-hudson",
+      "ardsley",
+      "elmsford"
+    ],
+    "larchmont": [
+      "mamaroneck",
+      "new-rochelle",
+      "rye",
+      "harrison",
+      "pelham-manor"
+    ],
+    "mamaroneck": [
+      "larchmont",
+      "rye",
+      "harrison",
+      "new-rochelle",
+      "scarsdale"
+    ],
+    "mount-vernon": [
+      "bronxville",
+      "pelham-manor",
+      "new-rochelle",
+      "yonkers",
+      "eastchester"
+    ],
+    "new-rochelle": [
+      "larchmont",
+      "mamaroneck",
+      "pelham-manor",
+      "mount-vernon",
+      "scarsdale"
+    ],
+    "pelham-manor": [
+      "village-of-pelham",
+      "new-rochelle",
+      "mount-vernon",
+      "bronxville",
+      "larchmont"
+    ],
+    "rye": [
+      "mamaroneck",
+      "harrison",
+      "larchmont",
+      "scarsdale",
+      "white-plains"
+    ],
+    "scarsdale": [
+      "hartsdale",
+      "eastchester",
+      "white-plains",
+      "bronxville",
+      "harrison"
+    ],
+    "tarrytown": [
+      "irvington",
+      "elmsford",
+      "dobbs-ferry",
+      "valhalla",
+      "white-plains"
+    ],
+    "valhalla": [
+      "white-plains",
+      "elmsford",
+      "tarrytown",
+      "hartsdale",
+      "ardsley"
+    ],
+    "village-of-pelham": [
+      "pelham-manor",
+      "mount-vernon",
+      "bronxville",
+      "new-rochelle",
+      "eastchester"
+    ],
+    "white-plains": [
+      "hartsdale",
+      "scarsdale",
+      "elmsford",
+      "valhalla",
+      "harrison"
+    ],
+    "yonkers": [
+      "mount-vernon",
+      "bronxville",
+      "hastings-on-hudson",
+      "fairview",
+      "dobbs-ferry"
+    ]
+  }
+}

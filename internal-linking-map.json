@@ -1,0 +1,258 @@
+{
+  "service_areas": {
+    "ardsley": "/ny/ardsley/",
+    "bronxville": "/ny/bronxville/",
+    "dobbs-ferry": "/ny/dobbs-ferry/",
+    "eastchester": "/ny/eastchester/",
+    "elmsford": "/ny/elmsford/",
+    "fairview": "/ny/fairview/",
+    "harrison": "/ny/harrison/",
+    "hartsdale": "/ny/hartsdale/",
+    "hastings-on-hudson": "/ny/hastings-on-hudson/",
+    "irvington": "/ny/irvington/",
+    "larchmont": "/ny/larchmont/",
+    "mamaroneck": "/ny/mamaroneck/",
+    "mount-vernon": "/ny/mount-vernon/",
+    "new-rochelle": "/ny/new-rochelle/",
+    "pelham-manor": "/ny/pelham-manor/",
+    "rye": "/ny/rye/",
+    "scarsdale": "/ny/scarsdale/",
+    "tarrytown": "/ny/tarrytown/",
+    "valhalla": "/ny/valhalla/",
+    "village-of-pelham": "/ny/village-of-pelham/",
+    "white-plains": "/ny/white-plains/",
+    "yonkers": "/ny/yonkers/"
+  },
+  "brands": {
+    "admiral": "/brands/admiral/",
+    "aeg": "/brands/aeg/",
+    "amana": "/brands/amana/",
+    "ariston": "/brands/ariston/",
+    "asko": "/brands/asko/",
+    "avantgarde": "/brands/avantgarde/",
+    "beaumark": "/brands/beaumark/",
+    "bertazzoni": "/brands/bertazzoni/",
+    "blomberg": "/brands/blomberg/",
+    "bluestar": "/brands/bluestar/",
+    "bosch": "/brands/bosch/",
+    "brada": "/brands/brada/",
+    "broan": "/brands/broan/",
+    "cafe": "/brands/cafe/",
+    "cove": "/brands/cove/",
+    "dacor": "/brands/dacor/",
+    "danby": "/brands/danby/",
+    "electrolux": "/brands/electrolux/",
+    "fisher-paykel": "/brands/fisher-paykel/",
+    "frigidaire": "/brands/frigidaire/",
+    "fulgor-milano": "/brands/fulgor-milano/",
+    "gaggenau": "/brands/gaggenau/",
+    "ge": "/brands/ge/",
+    "haier": "/brands/haier/",
+    "hobart": "/brands/hobart/",
+    "hotpoint": "/brands/hotpoint/",
+    "ikea": "/brands/ikea/",
+    "inglis": "/brands/inglis/",
+    "jenn-air": "/brands/jenn-air/",
+    "kenmore": "/brands/kenmore/",
+    "kitchenaid": "/brands/kitchenaid/",
+    "lg": "/brands/lg/",
+    "liebherr": "/brands/liebherr/",
+    "magic-chef": "/brands/magic-chef/",
+    "marvel": "/brands/marvel/",
+    "maytag": "/brands/maytag/",
+    "miele": "/brands/miele/",
+    "moffat": "/brands/moffat/",
+    "panasonic": "/brands/panasonic/",
+    "porter-charles": "/brands/porter-charles/",
+    "premier": "/brands/premier/",
+    "roper": "/brands/roper/",
+    "samsung": "/brands/samsung/",
+    "sharp": "/brands/sharp/",
+    "sirius": "/brands/sirius/",
+    "smeg": "/brands/smeg/",
+    "sub-zero": "/brands/sub-zero/",
+    "tappan": "/brands/tappan/",
+    "thermador": "/brands/thermador/",
+    "thor-kitchen": "/brands/thor-kitchen/",
+    "venmar": "/brands/venmar/",
+    "vent-a-hood": "/brands/vent-a-hood/",
+    "viking": "/brands/viking/",
+    "westinghouse": "/brands/westinghouse/",
+    "whirlpool": "/brands/whirlpool/",
+    "wolf": "/brands/wolf/"
+  },
+  "appliances": {
+    "refrigerator-repair": "/appliances/refrigerator-repair/",
+    "washer-repair": "/appliances/washer-repair/",
+    "dryer-repair": "/appliances/dryer-repair/",
+    "dishwasher-repair": "/appliances/dishwasher-repair/",
+    "oven-repair": "/appliances/oven-repair/",
+    "cooktop-repair": "/appliances/cooktop-repair/",
+    "microwave-repair": "/appliances/microwave-repair/",
+    "vent-hood-repair": "/appliances/vent-hood-repair/",
+    "wine-cooler-repair": "/appliances/wine-cooler-repair/",
+    "installation-maintenance": "/appliances/installation-maintenance/"
+  },
+  "nearby_clusters": {
+    "ardsley": [
+      "dobbs-ferry",
+      "hartsdale",
+      "elmsford",
+      "irvington",
+      "hastings-on-hudson"
+    ],
+    "bronxville": [
+      "eastchester",
+      "mount-vernon",
+      "pelham-manor",
+      "village-of-pelham",
+      "scarsdale"
+    ],
+    "dobbs-ferry": [
+      "ardsley",
+      "hastings-on-hudson",
+      "irvington",
+      "tarrytown",
+      "elmsford"
+    ],
+    "eastchester": [
+      "bronxville",
+      "scarsdale",
+      "mount-vernon",
+      "pelham-manor",
+      "hartsdale"
+    ],
+    "elmsford": [
+      "white-plains",
+      "hartsdale",
+      "valhalla",
+      "tarrytown",
+      "ardsley"
+    ],
+    "fairview": [
+      "yonkers",
+      "hastings-on-hudson",
+      "dobbs-ferry",
+      "irvington",
+      "ardsley"
+    ],
+    "harrison": [
+      "rye",
+      "mamaroneck",
+      "larchmont",
+      "scarsdale",
+      "white-plains"
+    ],
+    "hartsdale": [
+      "white-plains",
+      "scarsdale",
+      "ardsley",
+      "elmsford",
+      "eastchester"
+    ],
+    "hastings-on-hudson": [
+      "dobbs-ferry",
+      "irvington",
+      "ardsley",
+      "yonkers",
+      "fairview"
+    ],
+    "irvington": [
+      "dobbs-ferry",
+      "tarrytown",
+      "hastings-on-hudson",
+      "ardsley",
+      "elmsford"
+    ],
+    "larchmont": [
+      "mamaroneck",
+      "new-rochelle",
+      "rye",
+      "harrison",
+      "pelham-manor"
+    ],
+    "mamaroneck": [
+      "larchmont",
+      "rye",
+      "harrison",
+      "new-rochelle",
+      "scarsdale"
+    ],
+    "mount-vernon": [
+      "bronxville",
+      "pelham-manor",
+      "new-rochelle",
+      "yonkers",
+      "eastchester"
+    ],
+    "new-rochelle": [
+      "larchmont",
+      "mamaroneck",
+      "pelham-manor",
+      "mount-vernon",
+      "scarsdale"
+    ],
+    "pelham-manor": [
+      "village-of-pelham",
+      "new-rochelle",
+      "mount-vernon",
+      "bronxville",
+      "larchmont"
+    ],
+    "rye": [
+      "mamaroneck",
+      "harrison",
+      "larchmont",
+      "scarsdale",
+      "white-plains"
+    ],
+    "scarsdale": [
+      "hartsdale",
+      "eastchester",
+      "white-plains",
+      "bronxville",
+      "harrison"
+    ],
+    "tarrytown": [
+      "irvington",
+      "elmsford",
+      "dobbs-ferry",
+      "valhalla",
+      "white-plains"
+    ],
+    "valhalla": [
+      "white-plains",
+      "elmsford",
+      "tarrytown",
+      "hartsdale",
+      "ardsley"
+    ],
+    "village-of-pelham": [
+      "pelham-manor",
+      "mount-vernon",
+      "bronxville",
+      "new-rochelle",
+      "eastchester"
+    ],
+    "white-plains": [
+      "hartsdale",
+      "scarsdale",
+      "elmsford",
+      "valhalla",
+      "harrison"
+    ],
+    "yonkers": [
+      "mount-vernon",
+      "bronxville",
+      "hastings-on-hudson",
+      "fairview",
+      "dobbs-ferry"
+    ]
+  },
+  "total_internal_links": {
+    "service_area_links_per_page": 22,
+    "brand_links_per_page": 56,
+    "appliance_links_per_page": 10,
+    "nearby_town_links_per_town_page": 5
+  }
+}
