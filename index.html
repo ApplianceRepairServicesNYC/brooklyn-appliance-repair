@@ -1151,6 +1151,62 @@
  font-size: 13px;
  }
  }
+
+ .trust-badges-section { padding: 40px 20px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
+ .trust-badges-section h2 { text-align: center; margin-bottom: 30px; color: var(--blue); font-size: 28px; }
+ .trust-badges-container {
+     display: flex;
+     gap: 15px;
+     overflow-x: auto;
+     padding: 10px 0 20px;
+     scrollbar-width: none;
+     -ms-overflow-style: none;
+ }
+ .trust-badges-container::-webkit-scrollbar { display: none; }
+ .trust-badge {
+     flex: 0 0 160px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background: #fff;
+     border-radius: 12px;
+     padding: 20px 15px;
+     text-align: center;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+     border: 2px solid transparent;
+     transition: all .3s;
+ }
+ .trust-badge:hover { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); border-color: var(--blue); }
+ .trust-badge .icon { font-size: 32px; margin-bottom: 8px; color: var(--blue); }
+ .trust-badge:hover .icon { color: var(--red); }
+ .trust-badge .title { font-size: 13px; font-weight: bold; color: #333; margin: 0 0 8px; }
+ .trust-badge .description { font-size: 11px; color: #555; line-height: 1.3; margin-bottom: 8px; white-space: normal; flex-grow: 1; }
+ .trust-badge .toggle-button {
+     background: linear-gradient(45deg, var(--blue), #0052cc);
+     color: #fff;
+     border: none;
+     padding: 8px 14px;
+     border-radius: 6px;
+     font-size: 11px;
+     cursor: pointer;
+     transition: all .3s;
+ }
+ .trust-badge .toggle-button:hover { background: linear-gradient(45deg, #0f0f1a, #a01830); transform: translateY(-2px); }
+ .badge-modal {
+     display: none;
+     position: fixed;
+     top: 50%; left: 50%; transform: translate(-50%, -50%);
+     background: #fff; padding: 30px; border-radius: 12px;
+     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); z-index: 10001;
+     max-width: 400px; width: 90%;
+ }
+ .badge-modal.active { display: block; }
+ .badge-modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 9999; }
+ .badge-modal-overlay.active { display: block; }
+ .badge-modal-close { position: absolute; top: 12px; right: 12px; background: none; border: none; font-size: 24px; cursor: pointer; color: #666; }
+ .badge-modal-close:hover { color: var(--red); }
+ .badge-modal-title { font-size: 18px; font-weight: bold; margin-bottom: 12px; color: var(--blue); }
+ .badge-modal-content { font-size: 14px; line-height: 1.6; color: #444; }
  </style>
     <link rel="preconnect" href="https://static.elfsight.com">
     <link rel="dns-prefetch" href="https://static.elfsight.com">
@@ -1282,6 +1338,68 @@
 <script src="https://static.elfsight.com/platform/platform.js" async></script>
 <div class="elfsight-app-1634a6d6-e2fc-4121-bbd0-0f75968833a4" data-elfsight-app-lazy></div>
 </div></div>
+
+<section class="trust-badges-section">
+    <h2>Certified Brooklyn Appliance Repair Service</h2>
+    <div class="trust-badges-container">
+        <div class="trust-badge">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div class="title">Money-Back Guarantee</div>
+            <div class="description">Full refund if we can't repair your appliance.</div>
+            <button class="toggle-button" data-title="Money-Back Guarantee" data-details="We understand the frustration of dealing with companies that charge for repairs they can't complete. That's why we offer a 100% Money-Back Guarantee. If we are unable to complete your appliance repair, you will receive a full refund—no questions asked.">Learn More</button>
+        </div>
+        <div class="trust-badge">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            <div class="title">Same-Day Service</div>
+            <div class="description">Fast repairs, same day or within 24-48 hours.</div>
+            <button class="toggle-button" data-title="Same-Day Service" data-details="We know a broken appliance disrupts your daily routine, so we prioritize speed without sacrificing quality. We try our best to provide same-day service, and most repairs are completed within 24 to 48 hours. Our technicians arrive promptly, equipped to diagnose and fix your appliance quickly.">Learn More</button>
+        </div>
+        <div class="trust-badge">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            <div class="title">Warranty on All Repairs</div>
+            <div class="description">All repairs backed by our warranty.</div>
+            <button class="toggle-button" data-title="Warranty on All Repairs" data-details="Every repair we perform comes with a comprehensive warranty, ensuring your peace of mind. If an issue arises from our work, we'll return to fix it at no extra cost.">Learn More</button>
+        </div>
+        <div class="trust-badge">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            <div class="title">Background Checked</div>
+            <div class="description">Screened for your safety.</div>
+            <button class="toggle-button" data-title="Background Checked Technicians" data-details="Your safety is our priority, which is why all our technicians undergo thorough background checks. We hire only trustworthy professionals who are not only skilled but also respectful of your home.">Learn More</button>
+        </div>
+        <div class="trust-badge">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+            <div class="title">Weekend Service</div>
+            <div class="description">Repairs available on weekends.</div>
+            <button class="toggle-button" data-title="Weekend Service Available" data-details="Life doesn't pause on weekends, and neither do we. Our weekend service ensures you can schedule repairs at your convenience, without disrupting your workweek.">Learn More</button>
+        </div>
+        <div class="trust-badge">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M19.14 12.94c.04-.31.06-.63.06-.94 0-.31-.02-.63-.06-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+            <div class="title">Genuine OEM Parts</div>
+            <div class="description">Factory parts at fair prices.</div>
+            <button class="toggle-button" data-title="Genuine OEM Parts" data-details="We use only genuine manufacturer parts, ensuring optimal performance and longevity. Our transparent pricing means you get high-quality components without inflated costs.">Learn More</button>
+        </div>
+        <div class="trust-badge">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm6 9.09c0 4-2.55 7.7-6 8.83-3.45-1.13-6-4.82-6-8.83V6.31l6-2.12 6 2.12v4.78z"/></svg>
+            <div class="title">Fully Insured</div>
+            <div class="description">Coverage for property damages.</div>
+            <button class="toggle-button" data-title="Fully Insured" data-details="We are fully insured for property damages, providing you with peace of mind during every repair. Our comprehensive insurance coverage ensures that any unexpected incidents are handled responsibly.">Learn More</button>
+        </div>
+        <div class="trust-badge">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+            <div class="title">Safety & Protection</div>
+            <div class="description">Floor & area protection used.</div>
+            <button class="toggle-button" data-title="Safety & Protection" data-details="We prioritize your safety and the protection of your home. Our technicians use floor coverings and area protection to prevent any damage during repairs.">Learn More</button>
+        </div>
+    </div>
+</section>
+
+<!-- Badge Modal -->
+<div class="badge-modal" id="badgeModal">
+    <button class="badge-modal-close" onclick="closeBadgeModal()">&times;</button>
+    <h3 class="badge-modal-title" id="badgeModalTitle"></h3>
+    <div class="badge-modal-content" id="badgeModalContent"></div>
+</div>
+<div class="badge-modal-overlay" id="badgeModalOverlay" onclick="closeBadgeModal()"></div>
 
  <section style="padding: 60px 0; background: #fff;" aria-labelledby="about-section-heading">
  <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
@@ -2351,6 +2469,25 @@ if (sfModalOverlay) {
  sfModalOverlay.onclick = function() {
  if (sfCloseModal) sfCloseModal.click();
  };
+}
+
+// Badge Modal Functions
+document.querySelectorAll('.trust-badge .toggle-button').forEach(function(button) {
+ button.addEventListener('click', function() {
+  var title = this.getAttribute('data-title');
+  var details = this.getAttribute('data-details');
+  document.getElementById('badgeModalTitle').textContent = title;
+  document.getElementById('badgeModalContent').textContent = details;
+  document.getElementById('badgeModal').classList.add('active');
+  document.getElementById('badgeModalOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+ });
+});
+
+function closeBadgeModal() {
+ document.getElementById('badgeModal').classList.remove('active');
+ document.getElementById('badgeModalOverlay').classList.remove('active');
+ document.body.style.overflow = '';
 }
 </script>
 <script>var emailjs=function(e){"use strict";class t{constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0,t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"Network Error";this.status=e,this.text=t}}const i={origin:"https://api.emailjs.com",blockHeadless:!1,storageProvider:(()=>{if("undefined"!=typeof localStorage)return{get:e=>Promise.resolve(localStorage.getItem(e)),set:(e,t)=>Promise.resolve(localStorage.setItem(e,t)),remove:e=>Promise.resolve(localStorage.removeItem(e))}})()},r=e=>e?"string"==typeof e?{publicKey:e}:"[object Object]"===e.toString()?e:{}:{},o=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"https://api.emailjs.com";if(!e)return;const o=r(e);i.publicKey=o.publicKey,i.blockHeadless=o.blockHeadless,i.storageProvider=o.storageProvider,i.blockList=o.blockList,i.limitRate=o.limitRate,i.origin=o.origin||t},a=async function(e,r){let o=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const a=await fetch(i.origin+e,{method:"POST",headers:o,body:r}),s=await a.text(),n=new t(a.status,s);if(a.ok)return n;throw n},s=(e,t,i)=>{if(!e||"string"!=typeof e)throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!t||"string"!=typeof t)throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!i||"string"!=typeof i)throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates"},n=e=>e.webdriver||!e.languages||0===e.languages.length,l=()=>new t(451,"Unavailable For Headless Browser"),c=(e,t)=>{if((e=>!e.list?.length||!e.watchVariable)(e))return!1;((e,t)=>{if(!Array.isArray(e))throw"The BlockList list has to be an array";if("string"!=typeof t)throw"The BlockList watchVariable has to be a string"})(e.list,e.watchVariable);const i=(r=t,o=e.watchVariable,r instanceof FormData?r.get(o):r[o]);var r,o;return"string"==typeof i&&e.list.includes(i)},d=()=>new t(403,"Forbidden"),m=async(e,t,i)=>{if(!t.throttle||!i)return!1;((e,t)=>{if("number"!=typeof e||e<0)throw"The LimitRate throttle has to be a positive number";if(t&&"string"!=typeof t)throw"The LimitRate ID has to be a non-empty string"})(t.throttle,t.id);const r=t.id||e,o=await(async(e,t,i)=>{const r=Number(await i.get(e)||0);return t-Date.now()+r})(r,t.throttle,i);return o>0||(await i.set(r,Date.now().toString()),!1)},h=()=>new t(429,"Too Many Requests"),p=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=u.storageProvider||i.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());if(s(b,e,t),(e=>{if(e&&"[object Object]"!==e.toString())throw"The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/"})(o),o&&c(w,o))return Promise.reject(d());if(await m(location.pathname,y,f))return Promise.reject(h());const v={lib_version:"4.4.1",user_id:b,service_id:e,template_id:t,template_params:o};return a("/api/v1.0/email/send",JSON.stringify(v),{"Content-type":"application/json"})},u=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=i.storageProvider||u.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());const v=(e=>"string"==typeof e?document.querySelector(e):e)(o);s(b,e,t),(e=>{if(!e||"FORM"!==e.nodeName)throw"The 3rd parameter is expected to be the HTML form element or the style selector of the form"})(v);const j=new FormData(v);return c(w,j)?Promise.reject(d()):await m(location.pathname,y,f)?Promise.reject(h()):(j.append("lib_version","4.4.1"),j.append("service_id",e),j.append("template_id",t),j.append("user_id",b),a("/api/v1.0/email/send-form",j))};var b={init:o,send:p,sendForm:u,EmailJSResponseStatus:t};return e.EmailJSResponseStatus=t,e.default=b,e.init=o,e.send=p,e.sendForm=u,Object.defineProperty(e,"__esModule",{value:!0}),e}({});emailjs.init({publicKey:'zfCrLmZU8eK9CuZcs'});</script>
